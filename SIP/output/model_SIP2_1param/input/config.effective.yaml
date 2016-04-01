@@ -1,0 +1,98 @@
+currentOutputDir: output/model_SIP2_1param/
+learning:
+    mode: stateVarN
+    sutinfoFile: D:\New folder\benchmark\SIP/sutinfo.yaml
+    seed: 123
+    preferFirst: false
+    inconsistencyOn: false
+    reuseCounterExample: true
+    reduceCounterExample: true
+    useSutSimulation: false
+    compareSimulatedAndLearnedModelWhenHypFound: false
+    compareSimulatedAndLearnedModelAtEnd: false
+    compareRemote: false
+    compareRemoteServer: http://remote.compare.server:8000
+    compareMinValue: 0
+    compareMaxValue: 2
+    dataStructureElements: 0
+    equivOracle: randomWalkTest
+    maxTime: 0
+    maxNumRuns: -1
+testing:
+    resetProbability: 0.0
+    minTraceLength: 5
+    maxTraceLength: 100
+    maxNumTraces: 1000
+    minValue: 0
+    maxValue: 400
+    valuesExtendable: true
+    useTestingFallback: true
+    useConstantsInTestInputs: true
+sutInterface:
+    communicationChannel: socket
+    socket:
+        portNumber: 9999
+        server: unknown
+    directCall:
+        package: generated.sut
+        className: SutImpl
+    flattenAlphabet:
+        minValue: 0
+        maxValue: 0
+sutImplementation:
+    modelFile: model.uppaal.xml
+    modelName: ${modelDirName}
+    projectClassPath: build
+sutSimulation:
+    method: DirectMethodCall
+learnResults:
+    outputDir: output/model_SIP2_1param
+    abstractModelDotFile: learnedAbstractModel.dot
+    abstractModelPdfFile: learnedAbstractModel.pdf
+    writeAbstractModelPdfFile: false
+    learnedConcreteModelFile: learnedConcreteModel.xml
+    outputSourcesOfGeneratedJarFiles: false
+    abstractionFile: learnedAbstraction.txt
+    learnedModelDataFile: learnedModelData.json
+    statisticsFile: statistics.txt
+    statisticsJsonFile: statistics.json
+logging:
+    logDir: log/
+    hypDir: generated/hypothesis/
+    logFile: log.txt
+    logFileThreshold: info
+    consoleThreshold: info
+    rootLoggerLevel: info
+    learnlibLogLevel: info
+    special:
+        hypotheses: true
+        hypothesesWritePdf: false
+        memQueries: false
+        memTraces: false
+        equivQueries: false
+        equivTraces: false
+        memQueriesFile: memQueries.txt
+        memTracesFile: memTraces.txt
+        equivQueriesFile: equivQueries.txt
+        equivTracesFile: equivTraces.txt
+        concreteTree: false
+        concreteTreeFile: concreteTree.dot
+        concreteTreeStatistics: false
+        concreteTreeStatisticsFile: concreteTreeStatistics.json
+        plotConcreteTreeStatistics: false
+params:
+    originalArgs: [ '--tomte-root-path', 'D:\testtask\MasterThesis\tomte-0.4\tomte-0.4', '--output-dir', 'output/model_SIP2_1param', '--port', '9999', 'D:/New folder/benchmark/SIP/config.yaml', ]
+    configFile: D:/New folder/benchmark/SIP/config.yaml
+    tomteRootPath: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4
+    verboseLevel: 0
+dependency:
+    pythonCmd: C:\Python27\python.exe
+    javaCmd: C:\ProgramData\Oracle\Java\javapath\java.exe
+    javacCmd: javac
+    tomteLearnresult2uppaalCmd: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4\bin\tomte_learnresult2uppaal.bat
+    sutUppaal2JarCmd: D:\testtask\MasterThesis\sut-0.4\sut-0.4\bin\sut_uppaal2jar.bat
+    sutUppaal2SutInfoCmd: sut_uppaal2sutinfo
+    sutRunCmd: sut_run
+devel:
+    printStackTraceOfExceptions: true
+    runInEclipse: false

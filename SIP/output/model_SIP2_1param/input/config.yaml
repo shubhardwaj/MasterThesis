@@ -1,0 +1,17 @@
+learning:
+    mode: "stateVarN"
+    sutinfoFile: "sutinfo.yaml"
+    #useSutSimulation: true
+    #compareSimulatedAndLearnedModelWhenHypFound: true
+    #compareSimulatedAndLearnedModelAtEnd: false
+    #maxTime: 7200    
+sutImplementation:
+    modelFile: "model.uppaal.xml"
+testing:
+    minValue: 0
+    maxValue: 400
+    maxTraceLength: 100
+    maxNumTraces: 1000
+learnResults:
+    outputDir: "output/${sutname}"
+    writeAbstractModelPdfFile: false

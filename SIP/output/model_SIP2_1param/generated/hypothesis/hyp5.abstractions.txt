@@ -1,0 +1,38 @@
+----------------------------------------------
+Concrete alphabet:
+IACK(int)
+IINVITE(int)
+IPRACK(int)
+Inil()
+O100(int)
+O180(int)
+O183(int)
+O200(int)
+O481(int)
+O486(int)
+Otimeout()
+----------------------------------------------
+Abstraction:
+IACK([])
+IINVITE([])
+IPRACK([x0, x1])
+Inil()
+O100()
+O180()
+O183()
+O200()
+O481()
+O486()
+Otimeout()
+----------------------------------------------
+Abstract alphabet:
+IACK_-1
+IINVITE_-1
+IPRACK_-1
+IPRACK_0
+IPRACK_1
+Inil
+----------------------------------------------
+Constants:
+[]
+----------------------------------------------

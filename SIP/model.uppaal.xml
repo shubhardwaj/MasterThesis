@@ -1,0 +1,474 @@
+<nta>
+<declaration>
+// Place global declarations here.
+ min_value = 0;
+ max_value = 30;
+ lts_min_value = 2; 
+ lts_max_value = 2;
+ int firstId; 
+ int lastId;
+ void Inil() { }
+ void IINVITE(int CallId) { } 
+ void IPRACK(int CallId) { }
+ void IACK(int CallId) { }
+ void O100(int CallId) { }
+ void O180(int CallId) { }
+ void O183(int CallId) { }
+ void O200(int CallId) { } 
+ void O481(int CallId) { }
+ void O486(int CallId) { }
+ void Otimeout() { }
+</declaration>
+<template>
+<name x="5" y="5">Template</name>
+<declaration>// Place local declarations here.</declaration>
+<location id="id0" x="-24" y="-160"/>
+<location id="id1" x="64" y="-232"/>
+<location id="id2" x="1400" y="-8"/>
+<location id="id3" x="1312" y="-256"/>
+<location id="id4" x="1120" y="-320"/>
+<location id="id5" x="1312" y="-392"/>
+<location id="id6" x="1088" y="-392"/>
+<location id="id7" x="1328" y="-8"/>
+<location id="id8" x="1088" y="-8"/>
+<location id="id9" x="1312" y="-192"/>
+<location id="id10" x="1088" y="-192"/>
+<location id="id11" x="920" y="360"/>
+<location id="id12" x="-16" y="184"/>
+<location id="id13" x="920" y="16"/>
+<location id="id14" x="584" y="16"/>
+<location id="id15" x="-16" y="-24"/>
+<location id="id16" x="-16" y="40"/>
+<location id="id17" x="-232" y="-88"/>
+<location id="id18" x="-16" y="-88"/>
+<location id="id19" x="176" y="312"/>
+<location id="id20" x="176" y="184"/>
+<location id="id21" x="176" y="88"/>
+<location id="id22" x="872" y="-192"/>
+<location id="id23" x="472" y="-192"/>
+<location id="id24" x="176" y="-88"/>
+<location id="id25" x="176" y="-192"/>
+<location id="id26" x="176" y="-288"/>
+<init ref="id26"/>
+<transition>
+<source ref="id5"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1176" y="-440">IACK(CallId)</label>
+<nail x="1288" y="-424"/>
+<nail x="1152" y="-424"/>
+</transition>
+<transition>
+<source ref="id5"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1176" y="-464">IPRACK(CallId)</label>
+<nail x="1312" y="-448"/>
+<nail x="1136" y="-448"/>
+</transition>
+<transition>
+<source ref="id0"/>
+<target ref="id1"/>
+<label kind="synchronisation" x="-48" y="-232">IINVITE(CallId)</label>
+<nail x="-8" y="-232"/>
+</transition>
+<transition>
+<source ref="id0"/>
+<target ref="id1"/>
+<label kind="synchronisation" x="-48" y="-216">IPRACK(CallId)</label>
+</transition>
+<transition>
+<source ref="id0"/>
+<target ref="id1"/>
+<label kind="synchronisation" x="-48" y="-200">IACK(CallId)</label>
+<nail x="48" y="-184"/>
+</transition>
+<transition>
+<source ref="id1"/>
+<target ref="id0"/>
+<label kind="synchronisation" x="72" y="-184">Otimeout()</label>
+<nail x="64" y="-160"/>
+</transition>
+<transition>
+<source ref="id26"/>
+<target ref="id1"/>
+<label kind="synchronisation" x="80" y="-232">IACK(CallId)</label>
+<nail x="128" y="-248"/>
+</transition>
+<transition>
+<source ref="id26"/>
+<target ref="id1"/>
+<label kind="synchronisation" x="24" y="-296">IPRACK(CallId)</label>
+<nail x="112" y="-272"/>
+</transition>
+<transition>
+<source ref="id2"/>
+<target ref="id5"/>
+<label kind="synchronisation" x="1304" y="-72">O481(lastId)</label>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id2"/>
+<label kind="synchronisation" x="1344" y="-8">Inil()</label>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1104" y="112">IACK(CallId)</label>
+<nail x="1328" y="128"/>
+<nail x="1032" y="128"/>
+<nail x="1032" y="-160"/>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1104" y="80">IPRACK(CallId)</label>
+<nail x="1328" y="96"/>
+<nail x="1032" y="96"/>
+<nail x="1032" y="-160"/>
+</transition>
+<transition>
+<source ref="id3"/>
+<target ref="id5"/>
+<label kind="synchronisation" x="1224" y="-336">O486(firstId)</label>
+</transition>
+<transition>
+<source ref="id9"/>
+<target ref="id3"/>
+<label kind="synchronisation" x="1320" y="-232">Inil()</label>
+</transition>
+<transition>
+<source ref="id9"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1176" y="-512">IACK(CallId)</label>
+<nail x="1408" y="-192"/>
+<nail x="1408" y="-496"/>
+<nail x="1088" y="-496"/>
+</transition>
+<transition>
+<source ref="id9"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1176" y="-488">IPRACK(CallId)</label>
+<nail x="1384" y="-216"/>
+<nail x="1384" y="-472"/>
+<nail x="1104" y="-472"/>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id10"/>
+<label kind="guard" x="1048" y="-104">CallId==firstId</label>
+<label kind="synchronisation" x="1048" y="-88">IINVITE(CallId)</label>
+<nail x="1328" y="-40"/>
+<nail x="1088" y="-40"/>
+</transition>
+<transition>
+<source ref="id9"/>
+<target ref="id10"/>
+<label kind="guard" x="1104" y="-184">CallId==firstId</label>
+<label kind="synchronisation" x="1104" y="-168">IINVITE(CallId)</label>
+<nail x="1192" y="-184"/>
+</transition>
+<transition>
+<source ref="id9"/>
+<target ref="id8"/>
+<label kind="guard" x="1264" y="-168">CallId!=firstId</label>
+<label kind="synchronisation" x="1264" y="-152">IINVITE(CallId)</label>
+<label kind="assignment" x="1264" y="-136">lastId=CallId;</label>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id8"/>
+<label kind="guard" x="1152" y="0">CallId!=firstId</label>
+<label kind="synchronisation" x="1152" y="16">IINVITE(CallId)</label>
+<label kind="assignment" x="1152" y="32">lastId=CallId;</label>
+<nail x="1208" y="0"/>
+</transition>
+<transition>
+<source ref="id5"/>
+<target ref="id10"/>
+<label kind="guard" x="1112" y="-304">CallId==firstId</label>
+<label kind="synchronisation" x="1112" y="-288">IINVITE(CallId)</label>
+</transition>
+<transition>
+<source ref="id5"/>
+<target ref="id8"/>
+<label kind="guard" x="1176" y="136">CallId!=firstId</label>
+<label kind="synchronisation" x="1176" y="152">IINVITE(CallId)</label>
+<label kind="assignment" x="1176" y="168">lastId=CallId;</label>
+<nail x="1424" y="-392"/>
+<nail x="1424" y="136"/>
+<nail x="1088" y="136"/>
+</transition>
+<transition>
+<source ref="id4"/>
+<target ref="id5"/>
+<label kind="synchronisation" x="1112" y="-376">O180(firstId)</label>
+</transition>
+<transition>
+<source ref="id22"/>
+<target ref="id4"/>
+<label kind="synchronisation" x="1032" y="-312">Inil()</label>
+</transition>
+<transition>
+<source ref="id22"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="1008" y="-352">IACK(CallId)</label>
+<nail x="992" y="-312"/>
+</transition>
+<transition>
+<source ref="id6"/>
+<target ref="id5"/>
+<label kind="synchronisation" x="1140" y="-407">Otimeout()</label>
+</transition>
+<transition>
+<source ref="id22"/>
+<target ref="id6"/>
+<label kind="synchronisation" x="864" y="-344">IPRACK(CallId)</label>
+<nail x="976" y="-328"/>
+</transition>
+<transition>
+<source ref="id8"/>
+<target ref="id7"/>
+<label kind="synchronisation" x="1128" y="-40">O100(lastId)</label>
+<nail x="1208" y="-24"/>
+</transition>
+<transition>
+<source ref="id22"/>
+<target ref="id8"/>
+<label kind="guard" x="856" y="-128">CallId!=firstId</label>
+<label kind="synchronisation" x="856" y="-112">IINVITE(CallId)</label>
+<label kind="assignment" x="856" y="-96">lastId=CallId;</label>
+</transition>
+<transition>
+<source ref="id10"/>
+<target ref="id9"/>
+<label kind="synchronisation" x="1104" y="-216">O100(firstId)</label>
+<nail x="1192" y="-200"/>
+</transition>
+<transition>
+<source ref="id22"/>
+<target ref="id10"/>
+<label kind="guard" x="912" y="-224">CallId==firstId</label>
+<label kind="synchronisation" x="912" y="-208">IINVITE(CallId)</label>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id21"/>
+<label kind="guard" x="-112" y="248">CallId==firstId</label>
+<label kind="synchronisation" x="-112" y="264">IINVITE(CallId)</label>
+<nail x="-48" y="256"/>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id14"/>
+<label kind="guard" x="184" y="-408">CallId!=firstId</label>
+<label kind="synchronisation" x="184" y="-392">IINVITE(CallId)</label>
+<label kind="assignment" x="184" y="-376">lastId=CallId;</label>
+<nail x="-88" y="-376"/>
+<nail x="584" y="-376"/>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id23"/>
+<label kind="guard" x="-40" y="-360">CallId==firstId</label>
+<label kind="synchronisation" x="-40" y="-344">IPRACK(CallId)</label>
+<nail x="-232" y="-328"/>
+<nail x="472" y="-328"/>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id18"/>
+<label kind="guard" x="-152" y="-216">CallId!=firstId</label>
+<label kind="synchronisation" x="-152" y="-200">IPRACK(CallId)</label>
+<label kind="assignment" x="-152" y="-184">lastId=CallId;</label>
+<nail x="-120" y="-136"/>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id16"/>
+<label kind="synchronisation" x="-192" y="0">IACK(CallId)</label>
+<nail x="-120" y="-8"/>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id18"/>
+<label kind="guard" x="200" y="384">CallId!=firstId</label>
+<label kind="synchronisation" x="200" y="400">IPRACK(CallId)</label>
+<label kind="assignment" x="200" y="416">lastId=CallId;</label>
+<nail x="1064" y="416"/>
+<nail x="-208" y="416"/>
+</transition>
+<transition>
+<source ref="id11"/>
+<target ref="id17"/>
+<label kind="synchronisation" x="-136" y="344">O486(lastId)</label>
+<nail x="-232" y="360"/>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id11"/>
+<label kind="synchronisation" x="912" y="176">Inil()</label>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id16"/>
+<label kind="synchronisation" x="304" y="320">IACK(CallId)</label>
+<nail x="760" y="336"/>
+<nail x="72" y="336"/>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id23"/>
+<label kind="guard" x="624" y="-126">CallId==firstId</label>
+<label kind="synchronisation" x="624" y="-111">IPRACK(CallId)</label>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id21"/>
+<label kind="guard" x="360" y="56">CallId==firstId</label>
+<label kind="synchronisation" x="360" y="72">IINVITE(CallId)</label>
+<nail x="904" y="88"/>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id14"/>
+<label kind="guard" x="728" y="8">CallId!=firstId</label>
+<label kind="synchronisation" x="728" y="24">IINVITE(CallId)</label>
+<label kind="assignment" x="728" y="40">lastId=CallId;</label>
+<nail x="760" y="24"/>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id23"/>
+<label kind="guard" x="256" y="0">CallId==firstId</label>
+<label kind="synchronisation" x="256" y="15">IPRACK(CallId)</label>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id14"/>
+<label kind="guard" x="424" y="136">CallId!=firstId</label>
+<label kind="synchronisation" x="424" y="152">IINVITE(CallId)</label>
+<label kind="assignment" x="424" y="168">lastId=CallId;</label>
+<nail x="584" y="184"/>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id18"/>
+<label kind="guard" x="40" y="1">CallId!=firstId</label>
+<label kind="synchronisation" x="40" y="16">IPRACK(CallId)</label>
+<label kind="assignment" x="40" y="31">lastId=CallId;</label>
+</transition>
+<transition>
+<source ref="id12"/>
+<target ref="id17"/>
+<label kind="synchronisation" x="-224" y="96">O486(firstId)</label>
+<nail x="-184" y="96"/>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id12"/>
+<label kind="synchronisation" x="64" y="168">Inil()</label>
+</transition>
+<transition>
+<source ref="id14"/>
+<target ref="id13"/>
+<label kind="synchronisation" x="664" y="-24">O100(lastId)</label>
+<nail x="760" y="-8"/>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id14"/>
+<label kind="guard" x="416" y="-54">CallId!=firstId</label>
+<label kind="synchronisation" x="416" y="-39">IINVITE(CallId)</label>
+<label kind="assignment" x="416" y="-24">lastId=CallId;</label>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id16"/>
+<label kind="synchronisation" x="-16" y="96">IACK(CallId)</label>
+</transition>
+<transition>
+<source ref="id15"/>
+<target ref="id17"/>
+<label kind="synchronisation" x="-184" y="-72">O183(firstId)</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id15"/>
+<label kind="synchronisation" x="96" y="-80">Inil()</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id16"/>
+<label kind="synchronisation" x="32" y="-40">IACK(CallId)</label>
+</transition>
+<transition>
+<source ref="id16"/>
+<target ref="id17"/>
+<label kind="synchronisation" x="-128" y="-40">Otimeout()</label>
+<nail x="-104" y="-24"/>
+</transition>
+<transition>
+<source ref="id18"/>
+<target ref="id17"/>
+<label kind="synchronisation" x="-216" y="-104">O481(lastId)</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id18"/>
+<label kind="guard" x="16" y="-136">CallId!=firstId</label>
+<label kind="synchronisation" x="16" y="-120">IPRACK(CallId)</label>
+<label kind="assignment" x="16" y="-104">lastId=CallId;</label>
+</transition>
+<transition>
+<source ref="id19"/>
+<target ref="id20"/>
+<label kind="synchronisation" x="80" y="224">O100(firstId)</label>
+<nail x="168" y="256"/>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id19"/>
+<label kind="guard" x="192" y="216">CallId==firstId</label>
+<label kind="synchronisation" x="192" y="232">IINVITE(CallId)</label>
+<nail x="184" y="256"/>
+</transition>
+<transition>
+<source ref="id21"/>
+<target ref="id20"/>
+<label kind="synchronisation" x="136" y="104">O100(firstId)</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id21"/>
+<label kind="guard" x="176" y="-64">CallId==firstId</label>
+<label kind="synchronisation" x="176" y="-48">IINVITE(CallId)</label>
+</transition>
+<transition>
+<source ref="id23"/>
+<target ref="id22"/>
+<label kind="synchronisation" x="616" y="-208">O200(firstId)</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id23"/>
+<label kind="guard" x="192" y="-152">CallId==firstId</label>
+<label kind="synchronisation" x="192" y="-136">IPRACK(CallId)</label>
+</transition>
+<transition>
+<source ref="id25"/>
+<target ref="id24"/>
+<label kind="synchronisation" x="176" y="-176">O100(firstId)</label>
+</transition>
+<transition>
+<source ref="id26"/>
+<target ref="id25"/>
+<label kind="synchronisation" x="176" y="-272">IINVITE(CallId)</label>
+<label kind="assignment" x="176" y="-256">firstId=CallId;</label>
+</transition>
+</template>
+<system>
+// Place template instantiations here. 
+Process = Template(); 
+// List one or more processes to be composed into a system. 
+system Process;
+</system>
+</nta>

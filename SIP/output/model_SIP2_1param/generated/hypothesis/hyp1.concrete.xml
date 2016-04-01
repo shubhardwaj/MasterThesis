@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC "-//Uppaal Team//DTD Flat System 1.1//EN" "lib/flat-1_1.dtd">
+<nta>
+    <declaration>int local_x0 = -1 ;
+int x0 = -1 ;
+int local_p0 = -1 ;
+void IACK(int p0){}
+void IINVITE(int p0){}
+void IPRACK(int p0){}
+void Inil(){}
+void O100(int p0){}
+void O180(int p0){}
+void O183(int p0){}
+void O200(int p0){}
+void O481(int p0){}
+void O486(int p0){}
+void Otimeout(){}</declaration>
+    <template>
+        <name x="5" y="5">Template</name>
+        <declaration />
+        <location id="m11" x="0" y="0">
+            <name>m11</name>
+        </location>
+        <location id="m10" x="0" y="0">
+            <name>m10</name>
+        </location>
+        <location id="m13" x="0" y="0">
+            <name>m13</name>
+        </location>
+        <location id="m12" x="0" y="0">
+            <name>m12</name>
+        </location>
+        <location id="m15" x="0" y="0">
+            <name>m15</name>
+        </location>
+        <location id="m14" x="0" y="0">
+            <name>m14</name>
+        </location>
+        <location id="m17" x="0" y="0">
+            <name>m17</name>
+        </location>
+        <location id="m16" x="0" y="0">
+            <name>m16</name>
+        </location>
+        <location id="m19" x="0" y="0">
+            <name>m19</name>
+        </location>
+        <location id="m18" x="0" y="0">
+            <name>m18</name>
+        </location>
+        <location id="s3" x="0" y="0">
+            <name>s3</name>
+        </location>
+        <location id="s2" x="0" y="0">
+            <name>s2</name>
+        </location>
+        <location id="s1" x="0" y="0">
+            <name>s1</name>
+        </location>
+        <location id="s0" x="0" y="0">
+            <name>s0</name>
+        </location>
+        <location id="s4" x="0" y="0">
+            <name>s4</name>
+        </location>
+        <location id="m5" x="0" y="0">
+            <name>m5</name>
+        </location>
+        <location id="m4" x="0" y="0">
+            <name>m4</name>
+        </location>
+        <location id="m7" x="0" y="0">
+            <name>m7</name>
+        </location>
+        <location id="m6" x="0" y="0">
+            <name>m6</name>
+        </location>
+        <location id="m1" x="0" y="0">
+            <name>m1</name>
+        </location>
+        <location id="m0" x="0" y="0">
+            <name>m0</name>
+        </location>
+        <location id="m3" x="0" y="0">
+            <name>m3</name>
+        </location>
+        <location id="m2" x="0" y="0">
+            <name>m2</name>
+        </location>
+        <location id="m9" x="0" y="0">
+            <name>m9</name>
+        </location>
+        <location id="m8" x="0" y="0">
+            <name>m8</name>
+        </location>
+        <init ref="s0" />
+        <transition>
+            <source ref="s0" />
+            <target ref="m0" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m0" />
+            <target ref="s2" />
+            <label kind="synchronisation">O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s0" />
+            <target ref="m1" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m1" />
+            <target ref="s1" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s0" />
+            <target ref="m2" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m2" />
+            <target ref="s0" />
+            <label kind="synchronisation">Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s0" />
+            <target ref="m3" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m3" />
+            <target ref="s1" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m4" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m4" />
+            <target ref="s1" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m5" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m5" />
+            <target ref="s1" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m6" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m6" />
+            <target ref="s1" />
+            <label kind="synchronisation">Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m7" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m7" />
+            <target ref="s1" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m8" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m8" />
+            <target ref="s4" />
+            <label kind="synchronisation">O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m9" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">x0=-1000000; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m9" />
+            <target ref="s3" />
+            <label kind="synchronisation">O481(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m10" />
+            <label kind="synchronisation">Inil()</label>
+            <label kind="assignment">local_x0=x0; x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m10" />
+            <target ref="s3" />
+            <label kind="synchronisation">O183(local_x0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m11" />
+            <label kind="synchronisation">IACK(p0)</label>
+            <label kind="assignment">x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m11" />
+            <target ref="s3" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m12" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m12" />
+            <target ref="s4" />
+            <label kind="synchronisation">O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m13" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m13" />
+            <target ref="s3" />
+            <label kind="synchronisation">O481(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m14" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m14" />
+            <target ref="s3" />
+            <label kind="synchronisation">Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m15" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m15" />
+            <target ref="s3" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m16" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m16" />
+            <target ref="s4" />
+            <label kind="synchronisation">O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m17" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">x0=-1000000; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m17" />
+            <target ref="s3" />
+            <label kind="synchronisation">O481(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m18" />
+            <label kind="synchronisation">Inil()</label>
+            <label kind="assignment">local_x0=x0; x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m18" />
+            <target ref="s3" />
+            <label kind="synchronisation">O486(local_x0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m19" />
+            <label kind="synchronisation">IACK(p0)</label>
+            <label kind="assignment">x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m19" />
+            <target ref="s3" />
+            <label kind="synchronisation">Otimeout()</label>
+        </transition>
+    </template>
+    <system>Process = Template();system Process;</system>
+</nta>

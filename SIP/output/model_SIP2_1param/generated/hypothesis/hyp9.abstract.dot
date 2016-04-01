@@ -1,0 +1,76 @@
+digraph G {
+label=""
+s0 [color="red"]
+s1
+s2
+s3
+s4
+s5
+s6
+s7
+s8
+s9
+s0 [label="s0"];
+s0 -> s2[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_O100_p0</td></tr></table>>]
+s0 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s0 -> s0[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>Oquiescence</td></tr></table>>]
+s0 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s1 [label="s1"];
+s1 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s1 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s1 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>Oquiescence</td></tr></table>>]
+s1 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s2 [label="s2"];
+s2 -> s4[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_x1=x0_O100_p0</td></tr></table>>]
+s2 -> s5[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s2 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>O481_p0</td></tr></table>>]
+s2 -> s6[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_0</td><td>/</td><td>O200_x0</td></tr></table>>]
+s2 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>O183_x0</td></tr></table>>]
+s2 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s3 [label="s3"];
+s3 -> s4[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_x1=x0_O100_p0</td></tr></table>>]
+s3 -> s5[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s3 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>O481_p0</td></tr></table>>]
+s3 -> s6[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_0</td><td>/</td><td>O200_x0</td></tr></table>>]
+s3 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>Oquiescence</td></tr></table>>]
+s3 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s4 [label="s4"];
+s4 -> s4[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_O100_p0</td></tr></table>>]
+s4 -> s4[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s4 -> s6[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_1</td><td>/</td><td>x0=x1_x1_O200_x1</td></tr></table>>]
+s4 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>x0=x1_x1_O481_p0</td></tr></table>>]
+s4 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_0</td><td>/</td><td>x0=x1_x1_O481_x0</td></tr></table>>]
+s4 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>x0=x1_x1_O486_x0</td></tr></table>>]
+s4 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>x0=x1_x1_Otimeout</td></tr></table>>]
+s5 [label="s5"];
+s5 -> s4[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_x1=x0_O100_p0</td></tr></table>>]
+s5 -> s5[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s5 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>O481_p0</td></tr></table>>]
+s5 -> s6[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_0</td><td>/</td><td>O200_x0</td></tr></table>>]
+s5 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>O486_x0</td></tr></table>>]
+s5 -> s3[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s6 [label="s6"];
+s6 -> s8[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_x1=x0_O100_p0</td></tr></table>>]
+s6 -> s9[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s6 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s6 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>O180_x0</td></tr></table>>]
+s6 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s7 [label="s7"];
+s7 -> s8[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_x1=x0_O100_p0</td></tr></table>>]
+s7 -> s9[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s7 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s7 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>Oquiescence</td></tr></table>>]
+s7 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s8 [label="s8"];
+s8 -> s8[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_O100_p0</td></tr></table>>]
+s8 -> s8[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s8 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>x0=x1_x1_Otimeout</td></tr></table>>]
+s8 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>x0=x1_x1_O481_x0</td></tr></table>>]
+s8 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>x0=x1_x1_Otimeout</td></tr></table>>]
+s9 [label="s9"];
+s9 -> s8[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_-1</td><td>/</td><td>x0=p0_x1=x0_O100_p0</td></tr></table>>]
+s9 -> s9[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IINVITE_0</td><td>/</td><td>O100_x0</td></tr></table>>]
+s9 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IPRACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+s9 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>Inil</td><td>/</td><td>O486_x0</td></tr></table>>]
+s9 -> s7[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IACK_-1</td><td>/</td><td>Otimeout</td></tr></table>>]
+}

@@ -1,0 +1,1 @@
+[--tomte-root-path, D:\testtask\MasterThesis\tomte-0.4\tomte-0.4, --output-dir, output/model_SIP2_1param, --port, 9999, D:/New folder/benchmark/SIP/config.yaml]

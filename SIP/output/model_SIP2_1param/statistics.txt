@@ -1,0 +1,835 @@
+-------------------------------------------------------------------------------------
+                           RUNS
+-------------------------------------------------------------------------------------
+Run number                                     : 1
+Start learning from scratch                    : true
+HypL index/#states after run                   : 0/0
+Membership queries                             : 54
+Membership inputs                              : 120
+Running time of membership                     : 167 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 0
+Testing equivalence inputs                     : 0
+Running time of testing                        : 0 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 0
+Ce analysis membership inputs                  : 0
+Running time of counterexample analysis        : 0 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 54
+Learn inputs                                   : 102
+Testing resets                                 : 0
+Testing inputs                                 : 0
+Ce Analysis resets                             : 0
+Ce Analysis inputs                             : 0
+
+Number nodes in observation tree               : 0
+Number end nodes in observation tree           : 0
+
+num Ce inputs EquivOracle                      : 0
+num Ce inputs AfterLoopReduction               : 0
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 1
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+   ==>   Added output LookaheadTrace: Inil
+
+ Termination Reason: inconsistency in concrete tree found  => new lookahead => restart learning
+
+-------------------------------------------------------------------------------------
+Run number                                     : 2
+Start learning from scratch                    : true
+HypL index/#states after run                   : 1/5
+Membership queries                             : 105
+Membership inputs                              : 304
+Running time of membership                     : 165 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 2
+Testing equivalence inputs                     : 105
+Running time of testing                        : 32 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 3
+Ce analysis membership inputs                  : 6
+Running time of counterexample analysis        : 55 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 190
+Learn inputs                                   : 438
+Testing resets                                 : 2
+Testing inputs                                 : 105
+Ce Analysis resets                             : 10
+Ce Analysis inputs                             : 19
+
+Number nodes in observation tree               : 149
+Number end nodes in observation tree           : 64
+
+num Ce inputs EquivOracle                      : 5
+num Ce inputs AfterLoopReduction               : 2
+num Ce inputs AfterCeAnalysis                  : 2
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_-1(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_-1(0) / O200_x0(0)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_-1(0) / x0_O481_p0(0)
+
+ analyse ce relation: (value:0[-1],traceIndex:2,actionName:IPRACK,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IINVITE,paramIndex:0)
+
+ONLY NEW Abstraction
+
+NEW ABSTRACTION 'IPRACK_0' for Input: IPRACK, Parameter Index: 0, AbstractionVar: x0
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 3
+Start learning from scratch                    : true
+HypL index/#states after run                   : 2/7
+Membership queries                             : 216
+Membership inputs                              : 720
+Running time of membership                     : 139 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 1
+Testing equivalence inputs                     : 3
+Running time of testing                        : 15 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 4
+Ce analysis membership inputs                  : 12
+Running time of counterexample analysis        : 46 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 356
+Learn inputs                                   : 464
+Testing resets                                 : 2
+Testing inputs                                 : 5
+Ce Analysis resets                             : 23
+Ce Analysis inputs                             : 39
+
+Number nodes in observation tree               : 247
+Number end nodes in observation tree           : 107
+
+num Ce inputs EquivOracle                      : 3
+num Ce inputs AfterLoopReduction               : 3
+num Ce inputs AfterCeAnalysis                  : 3
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 1
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IACK_-1(0) / 
+x0_Otimeout()
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+IPRACK_-1(0) / 
+x0=p0_O200_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IACK(0), IPRACK(0)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IACK_-1(0) / x0_Otimeout() -> IPRACK_-1(0) / x0=p0_O200_p0(0)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IACK_-1(0) / x0_Otimeout() -> IPRACK_-1(0) / O481_p0(0)
+
+ analyse ce relation: (value:0[-1],traceIndex:4,actionName:IPRACK,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IINVITE,paramIndex:0)
+
+
+
+   ==>   Added guarded LookaheadTrace: IPRACK_L0ONLY NEW Abstraction
+
+NO NEW ABSTRACTION ADDED
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 4
+Start learning from scratch                    : true
+HypL index/#states after run                   : 3/7
+Membership queries                             : 216
+Membership inputs                              : 720
+Running time of membership                     : 431 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 1
+Testing equivalence inputs                     : 14
+Running time of testing                        : 16 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 7
+Ce analysis membership inputs                  : 29
+Running time of counterexample analysis        : 46 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 789
+Learn inputs                                   : 1531
+Testing resets                                 : 2
+Testing inputs                                 : 17
+Ce Analysis resets                             : 23
+Ce Analysis inputs                             : 85
+
+Number nodes in observation tree               : 586
+Number end nodes in observation tree           : 429
+
+num Ce inputs EquivOracle                      : 14
+num Ce inputs AfterLoopReduction               : 5
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 1
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_0(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+IPRACK_0(0) / 
+x0_Otimeout()
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+IPRACK_-1(0) / 
+Otimeout()
+   memV: []   stateVarUpdates: {}   stateVars: {}
+IINVITE_-1(1) / 
+x0=p0_O100_p0(1)
+   memV: [1]   stateVarUpdates: {0=1}   stateVars: {0=1}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0), IPRACK(0), IPRACK(0), IINVITE(1)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IPRACK_0(0) / x0_Otimeout() -> IPRACK_-1(0) / Otimeout() -> IINVITE_-1(1) / x0=p0_O100_p0(1)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IPRACK_-1(0) / x0_Otimeout() -> IPRACK_-1(0) / Otimeout() -> IINVITE_-1(1) / Otimeout()
+
+   => give back to learner the abstract CE :
+       abstractInputs:  IINVITE_-1 IPRACK_0 IPRACK_0 IPRACK_-1 IINVITE_-1 
+       OutputsHyp: x0=p0_O100_p0 O200_x0 x0_Otimeout Otimeout Otimeout 
+       OutputsSut: x0=p0_O100_p0 O200_x0 x0_Otimeout Otimeout x0=p0_O100_p0 
+
+ 
+
+ Termination Reason: concrete counterexample found! => Counterexample for Learner
+
+-------------------------------------------------------------------------------------
+Run number                                     : 5
+Start learning from scratch                    : false
+HypL index/#states after run                   : 4/8
+Membership queries                             : 71
+Membership inputs                              : 337
+Running time of membership                     : 124 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 45
+Testing equivalence inputs                     : 4406
+Running time of testing                        : 737 ms = 0:00:01 (h:m:s)
+Ce analysis membership queries                 : 3
+Ce analysis membership inputs                  : 9
+Running time of counterexample analysis        : 31 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 204
+Learn inputs                                   : 961
+Testing resets                                 : 46
+Testing inputs                                 : 4411
+Ce Analysis resets                             : 12
+Ce Analysis inputs                             : 28
+
+Number nodes in observation tree               : 767
+Number end nodes in observation tree           : 561
+
+num Ce inputs EquivOracle                      : 6
+num Ce inputs AfterLoopReduction               : 3
+num Ce inputs AfterCeAnalysis                  : 3
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IINVITE_-1(1) / 
+x0=p0_x1=x0_O100_p0(1)
+   memV: [1, 0]   stateVarUpdates: {0=1, 1=0}   stateVars: {0=1, 1=0}
+IPRACK_-1(0) / 
+x0=x1_x1_O200_x1(0)
+   memV: [0]   stateVarUpdates: {0=0, 1=null}   stateVars: {0=0}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IINVITE(1), IPRACK(0)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IINVITE_-1(1) / x0=p0_x1=x0_O100_p0(1) -> IPRACK_-1(0) / x0=x1_x1_O200_x1(0)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IINVITE_-1(1) / x0=p0_x1=x0_O100_p0(1) -> IPRACK_-1(0) / x0=x1_x1_O481_p0(0)
+
+ analyse ce relation: (value:0[-1],traceIndex:4,actionName:IPRACK,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IINVITE,paramIndex:0)
+
+ONLY NEW Abstraction
+
+NEW ABSTRACTION 'IPRACK_1' for Input: IPRACK, Parameter Index: 0, AbstractionVar: x1
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 6
+Start learning from scratch                    : true
+HypL index/#states after run                   : 5/7
+Membership queries                             : 301
+Membership inputs                              : 1014
+Running time of membership                     : 123 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 3
+Testing equivalence inputs                     : 219
+Running time of testing                        : 31 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 7
+Ce analysis membership inputs                  : 29
+Running time of counterexample analysis        : 32 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 906
+Learn inputs                                   : 142
+Testing resets                                 : 4
+Testing inputs                                 : 222
+Ce Analysis resets                             : 20
+Ce Analysis inputs                             : 52
+
+Number nodes in observation tree               : 800
+Number end nodes in observation tree           : 586
+
+num Ce inputs EquivOracle                      : 19
+num Ce inputs AfterLoopReduction               : 5
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 1
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_0(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+IACK_-1(1) / 
+x0_Otimeout()
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+IPRACK_-1(2) / 
+Otimeout()
+   memV: []   stateVarUpdates: {}   stateVars: {}
+IINVITE_-1(3) / 
+x0=p0_O100_p0(3)
+   memV: [3]   stateVarUpdates: {0=3}   stateVars: {0=3}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0), IACK(1), IPRACK(2), IINVITE(3)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IACK_-1(1) / x0_Otimeout() -> IPRACK_-1(2) / Otimeout() -> IINVITE_-1(3) / x0=p0_O100_p0(3)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IACK_-1(1) / x0_Otimeout() -> IPRACK_-1(2) / Otimeout() -> IINVITE_-1(3) / Otimeout()
+
+   => give back to learner the abstract CE :
+       abstractInputs:  IINVITE_-1 IPRACK_0 IACK_-1 IPRACK_-1 IINVITE_-1 
+       OutputsHyp: x0=p0_O100_p0 O200_x0 x0_Otimeout Otimeout Otimeout 
+       OutputsSut: x0=p0_O100_p0 O200_x0 x0_Otimeout Otimeout x0=p0_O100_p0 
+
+ 
+
+ Termination Reason: concrete counterexample found! => Counterexample for Learner
+
+-------------------------------------------------------------------------------------
+Run number                                     : 7
+Start learning from scratch                    : false
+HypL index/#states after run                   : 6/8
+Membership queries                             : 91
+Membership inputs                              : 434
+Running time of membership                     : 60 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 11
+Testing equivalence inputs                     : 1023
+Running time of testing                        : 101 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 3
+Ce analysis membership inputs                  : 12
+Running time of counterexample analysis        : 45 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 226
+Learn inputs                                   : 17
+Testing resets                                 : 12
+Testing inputs                                 : 1028
+Ce Analysis resets                             : 24
+Ce Analysis inputs                             : 95
+
+Number nodes in observation tree               : 803
+Number end nodes in observation tree           : 588
+
+num Ce inputs EquivOracle                      : 23
+num Ce inputs AfterLoopReduction               : 4
+num Ce inputs AfterCeAnalysis                  : 4
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_0(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+IINVITE_-1(0) / 
+O100_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+Inil() / 
+x0_O486_x0(0)
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0), IINVITE(0), Inil()]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IINVITE_-1(0) / O100_x0(0) -> Inil() / x0_O486_x0(0)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IINVITE_-1(0) / x0=p0_O100_p0(0) -> Inil() / x0_O481_x0(0)
+
+ analyse ce relation: (value:0[-1],traceIndex:4,actionName:IINVITE,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IINVITE,paramIndex:0)
+
+ONLY NEW Abstraction
+
+NEW ABSTRACTION 'IINVITE_0' for Input: IINVITE, Parameter Index: 0, AbstractionVar: x0
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 8
+Start learning from scratch                    : true
+HypL index/#states after run                   : 7/9
+Membership queries                             : 512
+Membership inputs                              : 1848
+Running time of membership                     : 211 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 1
+Testing equivalence inputs                     : 8
+Running time of testing                        : 15 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 7
+Ce analysis membership inputs                  : 29
+Running time of counterexample analysis        : 27 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 1535
+Learn inputs                                   : 2163
+Testing resets                                 : 2
+Testing inputs                                 : 12
+Ce Analysis resets                             : 27
+Ce Analysis inputs                             : 85
+
+Number nodes in observation tree               : 1243
+Number end nodes in observation tree           : 913
+
+num Ce inputs EquivOracle                      : 8
+num Ce inputs AfterLoopReduction               : 5
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 1
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_0(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+IPRACK_-1(1) / 
+x0_Otimeout()
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+IPRACK_-1(1) / 
+Otimeout()
+   memV: []   stateVarUpdates: {}   stateVars: {}
+IINVITE_-1(2) / 
+x0=p0_O100_p0(2)
+   memV: [2]   stateVarUpdates: {0=2}   stateVars: {0=2}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0), IPRACK(1), IPRACK(1), IINVITE(2)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IPRACK_-1(1) / x0_Otimeout() -> IPRACK_-1(1) / Otimeout() -> IINVITE_-1(2) / x0=p0_O100_p0(2)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IPRACK_-1(1) / x0_Otimeout() -> IPRACK_-1(1) / Otimeout() -> IINVITE_-1(2) / Otimeout()
+
+   => give back to learner the abstract CE :
+       abstractInputs:  IINVITE_-1 IPRACK_0 IPRACK_-1 IPRACK_-1 IINVITE_-1 
+       OutputsHyp: x0=p0_O100_p0 O200_x0 x0_Otimeout Otimeout Otimeout 
+       OutputsSut: x0=p0_O100_p0 O200_x0 x0_Otimeout Otimeout x0=p0_O100_p0 
+
+ 
+
+ Termination Reason: concrete counterexample found! => Counterexample for Learner
+
+-------------------------------------------------------------------------------------
+Run number                                     : 9
+Start learning from scratch                    : false
+HypL index/#states after run                   : 8/10
+Membership queries                             : 127
+Membership inputs                              : 618
+Running time of membership                     : 63 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 19
+Testing equivalence inputs                     : 1809
+Running time of testing                        : 183 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 4
+Ce analysis membership inputs                  : 20
+Running time of counterexample analysis        : 46 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 308
+Learn inputs                                   : 377
+Testing resets                                 : 20
+Testing inputs                                 : 1814
+Ce Analysis resets                             : 43
+Ce Analysis inputs                             : 113
+
+Number nodes in observation tree               : 1311
+Number end nodes in observation tree           : 963
+
+num Ce inputs EquivOracle                      : 9
+num Ce inputs AfterLoopReduction               : 5
+num Ce inputs AfterCeAnalysis                  : 5
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 1
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_0(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+Inil() / 
+x0_O180_x0(0)
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+Inil() / 
+x0_O486_x0(0)
+   memV: []   stateVarUpdates: {0=null}   stateVars: {}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0), Inil(), IINVITE(0), Inil()]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> Inil() / x0_O180_x0(0) -> IINVITE_-1(0) / x0=p0_O100_p0(0) -> Inil() / x0_O486_x0(0)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> Inil() / x0_O180_x0(0) -> IINVITE_-1(0) / x0=p0_O100_p0(0) -> Inil() / x0_O481_x0(0)
+
+ analyse ce relation: (value:0[-1],traceIndex:6,actionName:IINVITE,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IINVITE,paramIndex:0)
+
+
+
+   ==>   Added guarded LookaheadTrace: IINVITE_L0 -> InilONLY NEW Abstraction
+
+NO NEW ABSTRACTION ADDED
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 10
+Start learning from scratch                    : true
+HypL index/#states after run                   : 9/10
+Membership queries                             : 568
+Membership inputs                              : 2121
+Running time of membership                     : 605 ms = 0:00:01 (h:m:s)
+Testing equivalence queries                    : 221
+Testing equivalence inputs                     : 22025
+Running time of testing                        : 1466 ms = 0:00:01 (h:m:s)
+Ce analysis membership queries                 : 3
+Ce analysis membership inputs                  : 15
+Running time of counterexample analysis        : 50 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 3050
+Learn inputs                                   : 6322
+Testing resets                                 : 222
+Testing inputs                                 : 22030
+Ce Analysis resets                             : 27
+Ce Analysis inputs                             : 113
+
+Number nodes in observation tree               : 3132
+Number end nodes in observation tree           : 1975
+
+num Ce inputs EquivOracle                      : 25
+num Ce inputs AfterLoopReduction               : 5
+num Ce inputs AfterCeAnalysis                  : 5
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   Inil
+   IPRACK_L0
+   IINVITE_L0 -> Inil
+
+
+
+trace on sut 
+
+IINVITE_-1(0) / 
+x0=p0_O100_p0(0)
+   memV: [0]   stateVarUpdates: {0=0}   stateVars: {0=0}
+IPRACK_0(0) / 
+O200_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+IINVITE_-1(1) / 
+x0=p0_x1=x0_O100_p0(1)
+   memV: [1, 0]   stateVarUpdates: {0=1, 1=0}   stateVars: {0=1, 1=0}
+IINVITE_-1(0) / 
+x0=x1_x1_O100_x1(0)
+   memV: [0]   stateVarUpdates: {0=0, 1=null}   stateVars: {0=0}
+Inil() / 
+O486_x0(0)
+   memV: [0]   stateVarUpdates: {}   stateVars: {0=0}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IINVITE(0), IPRACK(0), IINVITE(1), IINVITE(0), Inil()]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IINVITE_-1(1) / x0=p0_x1=x0_O100_p0(1) -> IINVITE_-1(0) / x0=x1_x1_O100_x1(0) -> Inil() / O486_x0(0)
+       on Hyp (with abstractions determined using statevars of hyp):
+           IINVITE_-1(0) / x0=p0_O100_p0(0) -> IPRACK_0(0) / O200_x0(0) -> IINVITE_-1(1) / x0=p0_x1=x0_O100_p0(1) -> IINVITE_-1(0) / x0=p0_O100_p0(0) -> Inil() / x0=x1_x1_O481_x0(0)
+
+ analyse ce relation: (value:0[-1],traceIndex:6,actionName:IINVITE,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IINVITE,paramIndex:0)
+
+ONLY NEW Abstraction
+
+NEW ABSTRACTION 'IINVITE_1' for Input: IINVITE, Parameter Index: 0, AbstractionVar: x1
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 11
+Start learning from scratch                    : true
+HypL index/#states after run                   : 10/10
+Membership queries                             : 729
+Membership inputs                              : 2736
+Running time of membership                     : 246 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 1000
+Testing equivalence inputs                     : 100000
+Running time of testing                        : 5592 ms = 0:00:06 (h:m:s)
+Ce analysis membership queries                 : 0
+Ce analysis membership inputs                  : 0
+Running time of counterexample analysis        : 0 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 3372
+Learn inputs                                   : 678
+Testing resets                                 : 1001
+Testing inputs                                 : 100005
+Ce Analysis resets                             : 0
+Ce Analysis inputs                             : 0
+
+Number nodes in observation tree               : 3315
+Number end nodes in observation tree           : 2093
+
+num Ce inputs EquivOracle                      : 0
+num Ce inputs AfterLoopReduction               : 0
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : no counterexample found
+
+-------------------------------------------------------------------------------------
+                           SUMMARY
+-------------------------------------------------------------------------------------
+Total running time                             : 5308 ms = 0:00:05 (h:m:s)
+               `-> with last run               : 10900 ms = 0:00:11 (h:m:s)
+Total running time of Membership               : 2334 ms = 0:00:02 (h:m:s)
+Total running time of Testing                  : 2596 ms = 0:00:03 (h:m:s)
+                          `-> with last run    : 8188 ms = 0:00:08 (h:m:s)
+Total running time of CounterExample analysis  : 378 ms = 0:00:00 (h:m:s)
+
+Total processLearningResultTime                      : 33359 ms = 0:00:33 (h:m:s)
+Total cadpCompareTime                                : 0 ms = 0:00:00 (h:m:s)
+
+Total realTime                                 : 44634 ms = 0:00:45 (h:m:s)
+real start time                                : 1459448998455 ms since Jan 1, 1970 GMT  = 2016-03-31 21:29:58
+real end time                                  : 1459449043089 ms since Jan 1, 1970 GMT  = 2016-03-31 21:30:43
+
+Total runs (include last test run)             : 11
+Total membership queries                       : 2990
+Total membership inputs                        : 10972
+Total Testing equivalence queries              : 304
+                  `-> with last run            : 1304
+Total Testing equivalence inputs               : 29612
+                  `-> with last run            : 129612
+Total Ce Analysis membership queries           : 41
+Total Ce Analysis membership inputs            : 161
+Total abstraction refinements                  : 6
+Total number of guard lookahead traces added   : 2
+Total number of output lookahead traces added  : 1
+Total number of counterexamples sent to learner: 3
+Total states in learned abstract Mealy machine : 10
+
+Learn resets                                   : 10990
+Learn inputs                                   : 13195
+Testing resets                                 : 312
+Testing inputs                                 : 29644
+Ce Analysis resets                             : 209
+Ce Analysis inputs                             : 629
+
+Number nodes in observation tree               : 3315
+Number end nodes in observation tree           : 2093
+
+num Ce traces EquivOracle                      : 9
+num Ce inputs EquivOracle                      : 112
+num Ce traces AfterLoopReduction               : 9
+num Ce inputs AfterLoopReduction               : 37
+num Ce traces CeAnalysis                       : 6
+num Ce inputs AfterCeAnalysis                  : 22
+number Of Reused CounterExamples               : 0
+
+Termination Reason                             : Couldn't find counterexample after maxNumTraces applied
+Learning Successfull                           : null
+
+counter examples:
+run 1: [IINVITE_?(0), IPRACK_?(0)]
+run 2: [IINVITE_?(394), IACK_?(394), IPRACK_?(394)]
+run 3: [IINVITE_?(0), IPRACK_?(0), IPRACK_?(0), IPRACK_?(0), IINVITE_?(2)]
+run 4: [IINVITE_?(0), IINVITE_?(1), IPRACK_?(0)]
+run 5: [IINVITE_?(0), IPRACK_?(0), IACK_?(1), IPRACK_?(2), IINVITE_?(3)]
+run 6: [IINVITE_?(0), IPRACK_?(0), IINVITE_?(0), Inil()]
+run 7: [IINVITE_?(0), IPRACK_?(0), IPRACK_?(1), IPRACK_?(1), IINVITE_?(2)]
+run 8: [IINVITE_?(0), IPRACK_?(0), Inil(), IINVITE_?(0), Inil()]
+run 9: [IINVITE_?(0), IPRACK_?(0), IINVITE_?(1), IINVITE_?(0), Inil()]

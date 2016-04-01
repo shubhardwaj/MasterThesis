@@ -1,0 +1,24 @@
+constants: []
+inputInterfaces:
+  IACK:
+  - int
+  IINVITE:
+  - int
+  IPRACK:
+  - int
+  Inil: []
+name: model_SIP2_1param
+outputInterfaces:
+  O100:
+  - int
+  O180:
+  - int
+  O183:
+  - int
+  O200:
+  - int
+  O481:
+  - int
+  O486:
+  - int
+  Otimeout: []

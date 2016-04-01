@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC "-//Uppaal Team//DTD Flat System 1.1//EN" "lib/flat-1_1.dtd">
+<nta>
+    <declaration>int local_x0 = -1 ;
+int x0 = -1 ;
+int x1 = -1 ;
+int local_p0 = -1 ;
+int local_x1 = -1 ;
+void IACK(int p0){}
+void IINVITE(int p0){}
+void IPRACK(int p0){}
+void Inil(){}</declaration>
+    <template>
+        <name x="5" y="5">Template</name>
+        <declaration />
+        <location id="m31" x="0" y="0">
+            <name>m31</name>
+        </location>
+        <location id="m34" x="0" y="0">
+            <name>m34</name>
+        </location>
+        <location id="m33" x="0" y="0">
+            <name>m33</name>
+        </location>
+        <location id="m32" x="0" y="0">
+            <name>m32</name>
+        </location>
+        <location id="m11" x="0" y="0">
+            <name>m11</name>
+        </location>
+        <location id="m10" x="0" y="0">
+            <name>m10</name>
+        </location>
+        <location id="m13" x="0" y="0">
+            <name>m13</name>
+        </location>
+        <location id="m12" x="0" y="0">
+            <name>m12</name>
+        </location>
+        <location id="m15" x="0" y="0">
+            <name>m15</name>
+        </location>
+        <location id="m14" x="0" y="0">
+            <name>m14</name>
+        </location>
+        <location id="m17" x="0" y="0">
+            <name>m17</name>
+        </location>
+        <location id="m16" x="0" y="0">
+            <name>m16</name>
+        </location>
+        <location id="m19" x="0" y="0">
+            <name>m19</name>
+        </location>
+        <location id="m18" x="0" y="0">
+            <name>m18</name>
+        </location>
+        <location id="m30" x="0" y="0">
+            <name>m30</name>
+        </location>
+        <location id="s3" x="0" y="0">
+            <name>s3</name>
+        </location>
+        <location id="s2" x="0" y="0">
+            <name>s2</name>
+        </location>
+        <location id="s1" x="0" y="0">
+            <name>s1</name>
+        </location>
+        <location id="s0" x="0" y="0">
+            <name>s0</name>
+        </location>
+        <location id="s7" x="0" y="0">
+            <name>s7</name>
+        </location>
+        <location id="s6" x="0" y="0">
+            <name>s6</name>
+        </location>
+        <location id="s5" x="0" y="0">
+            <name>s5</name>
+        </location>
+        <location id="s4" x="0" y="0">
+            <name>s4</name>
+        </location>
+        <location id="m5" x="0" y="0">
+            <name>m5</name>
+        </location>
+        <location id="m4" x="0" y="0">
+            <name>m4</name>
+        </location>
+        <location id="m7" x="0" y="0">
+            <name>m7</name>
+        </location>
+        <location id="m6" x="0" y="0">
+            <name>m6</name>
+        </location>
+        <location id="m1" x="0" y="0">
+            <name>m1</name>
+        </location>
+        <location id="m0" x="0" y="0">
+            <name>m0</name>
+        </location>
+        <location id="m3" x="0" y="0">
+            <name>m3</name>
+        </location>
+        <location id="m2" x="0" y="0">
+            <name>m2</name>
+        </location>
+        <location id="m9" x="0" y="0">
+            <name>m9</name>
+        </location>
+        <location id="m8" x="0" y="0">
+            <name>m8</name>
+        </location>
+        <location id="m28" x="0" y="0">
+            <name>m28</name>
+        </location>
+        <location id="m29" x="0" y="0">
+            <name>m29</name>
+        </location>
+        <location id="m24" x="0" y="0">
+            <name>m24</name>
+        </location>
+        <location id="m25" x="0" y="0">
+            <name>m25</name>
+        </location>
+        <location id="m26" x="0" y="0">
+            <name>m26</name>
+        </location>
+        <location id="m27" x="0" y="0">
+            <name>m27</name>
+        </location>
+        <location id="m20" x="0" y="0">
+            <name>m20</name>
+        </location>
+        <location id="m21" x="0" y="0">
+            <name>m21</name>
+        </location>
+        <location id="m22" x="0" y="0">
+            <name>m22</name>
+        </location>
+        <location id="m23" x="0" y="0">
+            <name>m23</name>
+        </location>
+        <init ref="s0" />
+        <transition>
+            <source ref="s0" />
+            <target ref="m0" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m0" />
+            <target ref="s2" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s0" />
+            <target ref="m1" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m1" />
+            <target ref="s1" />
+            <label kind="synchronisation">OIPRACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s0" />
+            <target ref="m2" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m2" />
+            <target ref="s0" />
+            <label kind="synchronisation">OInil____Oquiescence____Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s0" />
+            <target ref="m3" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m3" />
+            <target ref="s1" />
+            <label kind="synchronisation">OIACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m4" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m4" />
+            <target ref="s1" />
+            <label kind="synchronisation">OIINVITE_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m5" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m5" />
+            <target ref="s1" />
+            <label kind="synchronisation">OIPRACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m6" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m6" />
+            <target ref="s1" />
+            <label kind="synchronisation">OInil____Oquiescence____Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s1" />
+            <target ref="m7" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m7" />
+            <target ref="s1" />
+            <label kind="synchronisation">OIACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m8" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">local_x0=x0; x0=p0; x1=local_x0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m8" />
+            <target ref="s4" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_x1XEQXx0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m9" />
+            <label kind="guard">p0 != x0</label>
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m9" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIPRACK_XMINX1____O481_p0____O481(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m10" />
+            <label kind="guard">p0 == x0</label>
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m10" />
+            <target ref="s5" />
+            <label kind="synchronisation">OIPRACK_0____O200_x0____O200(x0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m11" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m11" />
+            <target ref="s3" />
+            <label kind="synchronisation">OInil____O183_x0____O183(x0)</label>
+        </transition>
+        <transition>
+            <source ref="s2" />
+            <target ref="m12" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m12" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m13" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">local_x0=x0; x0=p0; x1=local_x0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m13" />
+            <target ref="s4" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_x1XEQXx0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m14" />
+            <label kind="guard">p0 != x0</label>
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m14" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIPRACK_XMINX1____O481_p0____O481(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m15" />
+            <label kind="guard">p0 == x0</label>
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m15" />
+            <target ref="s5" />
+            <label kind="synchronisation">OIPRACK_0____O200_x0____O200(x0)</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m16" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m16" />
+            <target ref="s3" />
+            <label kind="synchronisation">OInil____Oquiescence____Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s3" />
+            <target ref="m17" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m17" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m18" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m18" />
+            <target ref="s4" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m19" />
+            <label kind="guard">p0 != x0</label>
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">local_x1=x1; x0=local_x1; x1=-1000000; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m19" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIPRACK_XMINX1____x0XEQXx1_x1_O481_p0____O481(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m20" />
+            <label kind="guard">p0 == x0</label>
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">local_x0=x0; local_x1=x1; x0=local_x1; x1=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m20" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIPRACK_0____x0XEQXx1_x1_O481_x0____O481(local_x0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m21" />
+            <label kind="synchronisation">Inil()</label>
+            <label kind="assignment">local_x0=x0; local_x1=x1; x0=local_x1; x1=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m21" />
+            <target ref="s3" />
+            <label kind="synchronisation">OInil____x0XEQXx1_x1_O486_x0____O486(local_x0)</label>
+        </transition>
+        <transition>
+            <source ref="s4" />
+            <target ref="m22" />
+            <label kind="synchronisation">IACK(p0)</label>
+            <label kind="assignment">local_x1=x1; x0=local_x1; x1=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m22" />
+            <target ref="s3" />
+            <label kind="synchronisation">OIACK_XMINX1____x0XEQXx1_x1_Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s5" />
+            <target ref="m23" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m23" />
+            <target ref="s7" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s5" />
+            <target ref="m24" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m24" />
+            <target ref="s6" />
+            <label kind="synchronisation">OIPRACK_XMINX1____x0_Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s5" />
+            <target ref="m25" />
+            <label kind="synchronisation">Inil()</label>
+            <label kind="assignment">local_x0=x0; x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m25" />
+            <target ref="s6" />
+            <label kind="synchronisation">OInil____x0_O180_x0____O180(local_x0)</label>
+        </transition>
+        <transition>
+            <source ref="s5" />
+            <target ref="m26" />
+            <label kind="synchronisation">IACK(p0)</label>
+            <label kind="assignment">x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m26" />
+            <target ref="s6" />
+            <label kind="synchronisation">OIACK_XMINX1____x0_Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s6" />
+            <target ref="m27" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m27" />
+            <target ref="s7" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s6" />
+            <target ref="m28" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m28" />
+            <target ref="s6" />
+            <label kind="synchronisation">OIPRACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s6" />
+            <target ref="m29" />
+            <label kind="synchronisation">Inil()</label>
+        </transition>
+        <transition>
+            <source ref="m29" />
+            <target ref="s6" />
+            <label kind="synchronisation">OInil____Oquiescence____Oquiescence()</label>
+        </transition>
+        <transition>
+            <source ref="s6" />
+            <target ref="m30" />
+            <label kind="synchronisation">IACK(p0)</label>
+        </transition>
+        <transition>
+            <source ref="m30" />
+            <target ref="s6" />
+            <label kind="synchronisation">OIACK_XMINX1____Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s7" />
+            <target ref="m31" />
+            <label kind="synchronisation">IINVITE(p0)</label>
+            <label kind="assignment">x0=p0; local_p0=p0;</label>
+        </transition>
+        <transition>
+            <source ref="m31" />
+            <target ref="s7" />
+            <label kind="synchronisation">OIINVITE_XMINX1____x0XEQXp0_O100_p0____O100(local_p0)</label>
+        </transition>
+        <transition>
+            <source ref="s7" />
+            <target ref="m32" />
+            <label kind="synchronisation">IPRACK(p0)</label>
+            <label kind="assignment">x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m32" />
+            <target ref="s6" />
+            <label kind="synchronisation">OIPRACK_XMINX1____x0_Otimeout____Otimeout()</label>
+        </transition>
+        <transition>
+            <source ref="s7" />
+            <target ref="m33" />
+            <label kind="synchronisation">Inil()</label>
+            <label kind="assignment">local_x0=x0; x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m33" />
+            <target ref="s6" />
+            <label kind="synchronisation">OInil____x0_O481_x0____O481(local_x0)</label>
+        </transition>
+        <transition>
+            <source ref="s7" />
+            <target ref="m34" />
+            <label kind="synchronisation">IACK(p0)</label>
+            <label kind="assignment">x0=-1000000;</label>
+        </transition>
+        <transition>
+            <source ref="m34" />
+            <target ref="s6" />
+            <label kind="synchronisation">OIACK_XMINX1____x0_Otimeout____Otimeout()</label>
+        </transition>
+    </template>
+    <system>Process = Template();system Process;</system>
+</nta>
