@@ -1,0 +1,18 @@
+digraph G {
+label=""
+s0 [color="red"]
+s1
+s2
+s0 [label="s0"];
+s0 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IIn_-1</td><td>/</td><td>x0=p0_OOK</td></tr></table>>]
+s0 -> s0[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IAck_-1</td><td>/</td><td>OOK</td></tr></table>>]
+s0 -> s0[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>ISendFrame</td><td>/</td><td>ONOK</td></tr></table>>]
+s1 [label="s1"];
+s1 -> s2[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IIn_-1</td><td>/</td><td>x0_ONOK</td></tr></table>>]
+s1 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IAck_-1</td><td>/</td><td>OOK</td></tr></table>>]
+s1 -> s1[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>ISendFrame</td><td>/</td><td>OFrame_x0_c0</td></tr></table>>]
+s2 [label="s2"];
+s2 -> s2[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IIn_-1</td><td>/</td><td>ONOK</td></tr></table>>]
+s2 -> s2[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>IAck_-1</td><td>/</td><td>ONOK</td></tr></table>>]
+s2 -> s2[label=<<table border="0" cellpadding="1" cellspacing="0"><tr><td>ISendFrame</td><td>/</td><td>ONOK</td></tr></table>>]
+}

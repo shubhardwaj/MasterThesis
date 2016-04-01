@@ -1,0 +1,16 @@
+learning:
+    mode: "stateVarN"
+    sutinfoFile: "sutinfo.yaml"
+    #useSutSimulation: true
+    #maxTime: 7200    
+testing:
+    minValue: 0
+    maxValue: 400
+    maxTraceLength: 100
+    maxNumTraces: 1000
+    # we use maxTime learning above so we can use 'infinite' number test traces
+    #maxNumTraces: 100000000
+    #resetProbability: 0.05
+learnResults:
+    outputDir: "output/${sutname}"
+    writeAbstractModelPdfFile: false

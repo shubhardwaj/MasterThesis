@@ -1,0 +1,197 @@
+-------------------------------------------------------------------------------------
+                           RUNS
+-------------------------------------------------------------------------------------
+Run number                                     : 1
+Start learning from scratch                    : true
+HypL index/#states after run                   : 0/0
+Membership queries                             : 20
+Membership inputs                              : 34
+Running time of membership                     : 151 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 0
+Testing equivalence inputs                     : 0
+Running time of testing                        : 0 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 0
+Ce analysis membership inputs                  : 0
+Running time of counterexample analysis        : 0 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 20
+Learn inputs                                   : 27
+Testing resets                                 : 0
+Testing inputs                                 : 0
+Ce Analysis resets                             : 0
+Ce Analysis inputs                             : 0
+
+Number nodes in observation tree               : 0
+Number end nodes in observation tree           : 0
+
+num Ce inputs EquivOracle                      : 0
+num Ce inputs AfterLoopReduction               : 0
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 1
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+   ==>   Added output LookaheadTrace: ISendFrame
+
+ Termination Reason: inconsistency in concrete tree found  => new lookahead => restart learning
+
+-------------------------------------------------------------------------------------
+Run number                                     : 2
+Start learning from scratch                    : true
+HypL index/#states after run                   : 1/3
+Membership queries                             : 40
+Membership inputs                              : 102
+Running time of membership                     : 93 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 5
+Testing equivalence inputs                     : 409
+Running time of testing                        : 197 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 3
+Ce analysis membership inputs                  : 3
+Running time of counterexample analysis        : 40 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 71
+Learn inputs                                   : 144
+Testing resets                                 : 5
+Testing inputs                                 : 409
+Ce Analysis resets                             : 10
+Ce Analysis inputs                             : 13
+
+Number nodes in observation tree               : 52
+Number end nodes in observation tree           : 21
+
+num Ce inputs EquivOracle                      : 9
+num Ce inputs AfterLoopReduction               : 1
+num Ce inputs AfterCeAnalysis                  : 1
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   ISendFrame
+
+
+
+trace on sut 
+
+IAck_-1(0) / 
+ONOK()
+   memV: []   stateVarUpdates: {}   stateVars: {}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IAck(0)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IAck_-1(0) / ONOK()
+       on Hyp (with abstractions determined using statevars of hyp):
+           IAck_-1(0) / OOK()
+
+ analyse ce relation: (value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)
+
+ONLY NEW Abstraction
+
+NEW ABSTRACTION 'IAck_0' for Input: IAck, Parameter Index: 0, AbstractionVar: c0
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 3
+Start learning from scratch                    : true
+HypL index/#states after run                   : 2/7
+Membership queries                             : 145
+Membership inputs                              : 596
+Running time of membership                     : 257 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 1000
+Testing equivalence inputs                     : 100000
+Running time of testing                        : 9628 ms = 0:00:10 (h:m:s)
+Ce analysis membership queries                 : 0
+Ce analysis membership inputs                  : 0
+Running time of counterexample analysis        : 0 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 262
+Learn inputs                                   : 818
+Testing resets                                 : 1001
+Testing inputs                                 : 100001
+Ce Analysis resets                             : 0
+Ce Analysis inputs                             : 0
+
+Number nodes in observation tree               : 205
+Number end nodes in observation tree           : 88
+
+num Ce inputs EquivOracle                      : 0
+num Ce inputs AfterLoopReduction               : 0
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : no counterexample found
+
+-------------------------------------------------------------------------------------
+                           SUMMARY
+-------------------------------------------------------------------------------------
+Total running time                             : 738 ms = 0:00:01 (h:m:s)
+               `-> with last run               : 10366 ms = 0:00:10 (h:m:s)
+Total running time of Membership               : 501 ms = 0:00:01 (h:m:s)
+Total running time of Testing                  : 197 ms = 0:00:00 (h:m:s)
+                          `-> with last run    : 9825 ms = 0:00:10 (h:m:s)
+Total running time of CounterExample analysis  : 40 ms = 0:00:00 (h:m:s)
+
+Total processLearningResultTime                      : 9247 ms = 0:00:09 (h:m:s)
+Total cadpCompareTime                                : 0 ms = 0:00:00 (h:m:s)
+
+Total realTime                                 : 20257 ms = 0:00:20 (h:m:s)
+real start time                                : 1459493201070 ms since Jan 1, 1970 GMT  = 2016-04-01 09:46:41
+real end time                                  : 1459493221327 ms since Jan 1, 1970 GMT  = 2016-04-01 09:47:01
+
+Total runs (include last test run)             : 3
+Total membership queries                       : 205
+Total membership inputs                        : 732
+Total Testing equivalence queries              : 5
+                  `-> with last run            : 1005
+Total Testing equivalence inputs               : 409
+                  `-> with last run            : 100409
+Total Ce Analysis membership queries           : 3
+Total Ce Analysis membership inputs            : 3
+Total abstraction refinements                  : 1
+Total number of guard lookahead traces added   : 0
+Total number of output lookahead traces added  : 1
+Total number of counterexamples sent to learner: 0
+Total states in learned abstract Mealy machine : 7
+
+Learn resets                                   : 353
+Learn inputs                                   : 989
+Testing resets                                 : 5
+Testing inputs                                 : 409
+Ce Analysis resets                             : 10
+Ce Analysis inputs                             : 13
+
+Number nodes in observation tree               : 205
+Number end nodes in observation tree           : 88
+
+num Ce traces EquivOracle                      : 1
+num Ce inputs EquivOracle                      : 9
+num Ce traces AfterLoopReduction               : 1
+num Ce inputs AfterLoopReduction               : 1
+num Ce traces CeAnalysis                       : 1
+num Ce inputs AfterCeAnalysis                  : 1
+number Of Reused CounterExamples               : 0
+
+Termination Reason                             : Couldn't find counterexample after maxNumTraces applied
+Learning Successfull                           : null
+
+counter examples:
+run 1: [IAck_?(0)]

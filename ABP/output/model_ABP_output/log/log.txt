@@ -1,0 +1,628 @@
+INFO  - abslearning.learner.Config:504 - SUT name: model_ABP_output
+INFO  - abslearning.learner.Config:505 - output dir: output/model_ABP_output/
+INFO  - abslearning.learner.Config:506 - log dir: output/model_ABP_output/log//
+INFO  - abslearning.learner.Config:959 - CURRENT CONFIG:
+
+currentOutputDir: output/model_ABP_output/
+learning:
+    mode: stateVarN
+    sutinfoFile: D:\New folder\benchmark\ABP/sutinfo.yaml
+    seed: 123
+    preferFirst: false
+    inconsistencyOn: false
+    reuseCounterExample: true
+    reduceCounterExample: true
+    useSutSimulation: false
+    compareSimulatedAndLearnedModelWhenHypFound: false
+    compareSimulatedAndLearnedModelAtEnd: false
+    compareRemote: false
+    compareRemoteServer: http://remote.compare.server:8000
+    compareMinValue: 0
+    compareMaxValue: 2
+    dataStructureElements: 0
+    equivOracle: randomWalkTest
+    maxTime: 0
+    maxNumRuns: -1
+testing:
+    resetProbability: 0.0
+    minTraceLength: 5
+    maxTraceLength: 100
+    maxNumTraces: 1000
+    minValue: 0
+    maxValue: 400
+    valuesExtendable: true
+    useTestingFallback: true
+    useConstantsInTestInputs: true
+sutInterface:
+    communicationChannel: socket
+    socket:
+        portNumber: 9999
+        server: unknown
+    directCall:
+        package: generated.sut
+        className: SutImpl
+    flattenAlphabet:
+        minValue: 0
+        maxValue: 0
+sutImplementation:
+    modelName: ${modelDirName}
+    projectClassPath: build
+sutSimulation:
+    method: DirectMethodCall
+learnResults:
+    outputDir: output/model_ABP_output
+    abstractModelDotFile: learnedAbstractModel.dot
+    abstractModelPdfFile: learnedAbstractModel.pdf
+    writeAbstractModelPdfFile: false
+    learnedConcreteModelFile: learnedConcreteModel.xml
+    outputSourcesOfGeneratedJarFiles: false
+    abstractionFile: learnedAbstraction.txt
+    learnedModelDataFile: learnedModelData.json
+    statisticsFile: statistics.txt
+    statisticsJsonFile: statistics.json
+logging:
+    logDir: log/
+    hypDir: generated/hypothesis/
+    logFile: log.txt
+    logFileThreshold: info
+    consoleThreshold: info
+    rootLoggerLevel: info
+    learnlibLogLevel: info
+    special:
+        hypotheses: true
+        hypothesesWritePdf: false
+        memQueries: false
+        memTraces: false
+        equivQueries: false
+        equivTraces: false
+        memQueriesFile: memQueries.txt
+        memTracesFile: memTraces.txt
+        equivQueriesFile: equivQueries.txt
+        equivTracesFile: equivTraces.txt
+        concreteTree: false
+        concreteTreeFile: concreteTree.dot
+        concreteTreeStatistics: false
+        concreteTreeStatisticsFile: concreteTreeStatistics.json
+        plotConcreteTreeStatistics: false
+params:
+    originalArgs: [ '--tomte-root-path', 'D:\testtask\MasterThesis\tomte-0.4\tomte-0.4', '--output-dir', 'output/model_ABP_output', '--port', '9999', 'D:/New folder/benchmark/ABP/config.yaml', ]
+    configFile: D:/New folder/benchmark/ABP/config.yaml
+    tomteRootPath: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4
+    verboseLevel: 0
+dependency:
+    pythonCmd: C:\Python27\python.exe
+    javaCmd: C:\ProgramData\Oracle\Java\javapath\java.exe
+    javacCmd: javac
+    tomteLearnresult2uppaalCmd: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4\bin\tomte_learnresult2uppaal.bat
+    sutUppaal2JarCmd: D:\testtask\MasterThesis\sut-0.4\sut-0.4\bin\sut_uppaal2jar.bat
+    sutUppaal2SutInfoCmd: sut_uppaal2sutinfo
+    sutRunCmd: sut_run
+devel:
+    printStackTraceOfExceptions: true
+    runInEclipse: false
+
+INFO  - abslearning.learner.Main:118 - TOMTE release-version: 0.4
+INFO  - abslearning.learner.Main:155 - learning mode: stateVarN
+INFO  - abslearning.learner.Main:171 - learning without a model
+FATAL - abslearning.learner.Main:190 - Constant: 0
+FATAL - abslearning.learner.Main:190 - Constant: 1
+INFO  - abslearning.learner.Statistics:515 - 
+
+===================================================================================
+                         Run: 1
+===================================================================================
+
+INFO  - abslearning.learner.Main:445 - STARTING TOMTE
+INFO  - abslearning.learner.Main:460 - maximum learning time (seconds): 0
+INFO  - abslearning.learner.Main:473 - learning mode:stateVarN
+FATAL - abslearning.learner.Main:499 - upper: IACK lower: IAck
+FATAL - abslearning.learner.Main:499 - upper: IIN lower: IIn
+FATAL - abslearning.learner.Main:499 - upper: ISENDFRAME lower: ISendFrame
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:102 - rootNodeMaxInputValue: -1
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:120 - Lookahead traces: []
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:168 - rootMaxInputValue: -1
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  0 seconds, number member/test inputs  in current run : 0/0
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start learning (in run 1)
+-----------------------------------------------------------------------------------
+
+INFO  - abslearning.learner.Main:604 - Start Learning
+FATAL - abslearning.learner.Main:608 - abstraction:
+----------------------------------------------
+Concrete alphabet:
+IAck(int)
+IIn(int)
+ISendFrame()
+OFrame(int, int)
+ONOK()
+OOK()
+----------------------------------------------
+Abstraction:
+IAck([])
+IIn([])
+ISendFrame()
+OFrame()
+ONOK()
+OOK()
+----------------------------------------------
+Abstract alphabet:
+IAck_-1
+IIn_-1
+ISendFrame
+----------------------------------------------
+Constants:
+[0, 1]
+----------------------------------------------
+
+INFO  - abslearning.learner.Main:610 - Before Learning
+FATAL - abslearning.learner.Main:611 - hypCounter(counts number of hyps found)  0
+FATAL - abslearning.learner.Main:612 - start learning: 1
+INFO  - abslearning.tree.trace.LookaheadSutTraceStateVar:418 - Inconsistency in concrete tree! Parent node: 2, mem: 2 , parentMemV: [], prevTransitionParams: []
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:357 - INCONSISTENCY IN TREE!!!!
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:521 - currentNode.id: 14
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:522 - currentNode.input: ISendFrame
+INFO  - abslearning.tree.trace.LookaheadSutTraceStateVar:526 - newLookaheadTrace: OFrame_?(2,0) / ISendFrame()
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:1078 - 
+
+
+ NEW LOOKAHEAD TRACE FOR OUTPUT:       ISendFrame
+
+
+ 
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\n   \u003d\u003d\u003e   Added output LookaheadTrace: ISendFrame"
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:1090 - 
+
+  lookaheadTraces [ISendFrame]
+
+FATAL - abslearning.tree.SutConcreteTree:41 - 
+
+   INCREASE VERSION of tree!! 
+
+
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\n   \u003d\u003d\u003e   Added output LookaheadTrace: ISendFrame\n\n Termination Reason: inconsistency in concrete tree found  \u003d\u003e new lookahead \u003d\u003e restart learning"
+INFO  - abslearning.learner.Main:889 - Catched RestartLearningException in Main during phase: learning
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start afterLearning (in run 1)
+-----------------------------------------------------------------------------------
+
+INFO  - abslearning.learner.Main:925 - Inconsistent concrete tree. Restart learning with new lookahead traces!
+INFO  - abslearning.learner.Main:929 - Restart Learning
+INFO  - abslearning.learner.Statistics:581 - 
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 1
+Start learning from scratch                    : true
+HypL index/#states after run                   : 0/0
+Membership queries                             : 20
+Membership inputs                              : 34
+Running time of membership                     : 151 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 0
+Testing equivalence inputs                     : 0
+Running time of testing                        : 0 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 0
+Ce analysis membership inputs                  : 0
+Running time of counterexample analysis        : 0 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 20
+Learn inputs                                   : 27
+Testing resets                                 : 0
+Testing inputs                                 : 0
+Ce Analysis resets                             : 0
+Ce Analysis inputs                             : 0
+
+Number nodes in observation tree               : 0
+Number end nodes in observation tree           : 0
+
+num Ce inputs EquivOracle                      : 0
+num Ce inputs AfterLoopReduction               : 0
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 1
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+   ==>   Added output LookaheadTrace: ISendFrame
+
+ Termination Reason: inconsistency in concrete tree found  => new lookahead => restart learning
+
+
+
+
+
+INFO  - abslearning.learner.Statistics:515 - 
+
+===================================================================================
+                         Run: 2
+===================================================================================
+
+FATAL - abslearning.learner.Main:938 - RESET TRACE STORE
+FATAL - abslearning.tree.SutConcreteTree:41 - 
+
+   INCREASE VERSION of tree!! 
+
+
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:168 - rootMaxInputValue: -1
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  0 seconds, number member/test inputs  in current run : 0/0
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start learning (in run 2)
+-----------------------------------------------------------------------------------
+
+INFO  - abslearning.learner.Main:604 - Start Learning
+FATAL - abslearning.learner.Main:608 - abstraction:
+----------------------------------------------
+Concrete alphabet:
+IAck(int)
+IIn(int)
+ISendFrame()
+OFrame(int, int)
+ONOK()
+OOK()
+----------------------------------------------
+Abstraction:
+IAck([])
+IIn([])
+ISendFrame()
+OFrame()
+ONOK()
+OOK()
+----------------------------------------------
+Abstract alphabet:
+IAck_-1
+IIn_-1
+ISendFrame
+----------------------------------------------
+Constants:
+[0, 1]
+----------------------------------------------
+
+INFO  - abslearning.learner.Main:610 - Before Learning
+FATAL - abslearning.learner.Main:611 - hypCounter(counts number of hyps found)  0
+FATAL - abslearning.learner.Main:612 - start learning: 1
+INFO  - abslearning.learner.Main:616 - Done Learning
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start afterLearning (in run 2)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  0 seconds, number member/test inputs  in current run : 40/0
+INFO  - abslearning.learner.Main:628 - Hypothesis 1
+INFO  - abslearning.learner.Hypothesis:67 - update hyp in mapper
+INFO  - sut.implementation.Util:97 - create uppaal model for concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4\bin\tomte_learnresult2uppaal.bat output/model_ABP_output/generated/hypothesis/hyp1.abstractions.json output/model_ABP_output/generated/hypothesis/hyp1.abstract.dot output\model_ABP_output\generated\hypothesis//hyp1.concrete.xml stateVar concreteOutput
+INFO  - sut.implementation.Util:99 - create sut from uppaal model of concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\sut-0.4\sut-0.4\bin\sut_uppaal2jar.bat output\model_ABP_output\generated\hypothesis//hyp1.concrete.xml output/model_ABP_output/generated/hypothesis/hyp1.concrete.jar hypothesis Hyp1 
+FATAL - sut.implementation.Util:147 - create model created
+INFO  - sut.implementation.Util:97 - create uppaal model for concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4\bin\tomte_learnresult2uppaal.bat output/model_ABP_output/generated/hypothesis/hyp1.abstractions.json output/model_ABP_output/generated/hypothesis/hyp1.abstract.dot output\model_ABP_output\generated\hypothesis//hyp1fullHypOutput.concrete.xml stateVar fullHypOutput
+INFO  - sut.implementation.Util:99 - create sut from uppaal model of concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\sut-0.4\sut-0.4\bin\sut_uppaal2jar.bat output\model_ABP_output\generated\hypothesis//hyp1fullHypOutput.concrete.xml output/model_ABP_output/generated/hypothesis/hyp1fullHypOutput.concrete.jar hypothesis HypfullHypOutput1 
+FATAL - sut.implementation.Util:147 - create model created
+INFO  - abslearning.learner.Main:653 - update hyp in mapper
+INFO  - abslearning.mapper.Mapper:133 - construct concrete hyp
+INFO  - abslearning.mapper.Mapper:137 - construct special concrete hyp with abstract inputs as output
+INFO  - abslearning.learner.Main:668 - get number (end)nodes in tree
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  5 seconds, number member/test inputs  in current run : 40/0
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start testing (in run 2)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.RandomWalkTester:213 - hypTrace:IAck(43) / OOK() -> IAck(1) / OOK() -> ISendFrame() / ONOK() -> IAck(1) / OOK() -> ISendFrame() / ONOK() -> IIn(161) / OOK() -> ISendFrame() / OFrame(161,0) -> IAck(0) / OOK() -> ISendFrame() / OFrame(161,0)
+FATAL - abslearning.learner.RandomWalkTester:214 - sutTrace:IAck(43) / OOK() -> IAck(1) / OOK() -> ISendFrame() / ONOK() -> IAck(1) / OOK() -> ISendFrame() / ONOK() -> IIn(161) / OOK() -> ISendFrame() / OFrame(161,0) -> IAck(0) / OOK() -> ISendFrame() / ONOK()
+FATAL - abslearning.learner.RandomWalkTester:215 - SUT:abstr:ONOK_? concr:ONOK() trIndx:17 methIndx:2
+FATAL - abslearning.learner.RandomWalkTester:216 - HYP:abstr:OFrame_x0_c0 concr:OFrame(161,0) trIndx:17 methIndx:1
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start afterTesting (in run 2)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  5 seconds, number member/test inputs  in current run : 40/5
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start analyzeCounterexample (in run 2)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.Main:766 - Found Counterexample:
+FATAL - abslearning.learner.Main:767 -  |-> trace  to distinguishing output: IAck_-1(43) / OOK_?() -> IAck_-1(1) / OOK_?() -> ISendFrame() / ONOK_?() -> IAck_-1(1) / OOK_?() -> ISendFrame() / ONOK_?() -> IIn_-1(161) / OOK_?() -> ISendFrame() / OFrame_?(161,0) -> IAck_-1(0) / OOK_?() -> ISendFrame() / ONOK_?()
+FATAL - abslearning.learner.Main:768 -  `-> result of distinguishing output:  SUT ONOK_?()  NOT equals HYP OFrame_x0_c0(161,0) ??
+FATAL - abslearning.mapper.Mapper:781 - concreteCeTraceWithAlsoHypAbstractions:
+    IAck_-1(43) / OOK() -> IAck_-1(1) / OOK() -> ISendFrame() / ONOK() -> IAck_-1(1) / OOK() -> ISendFrame() / ONOK() -> IIn_-1(161) / x0=p0_OOK() -> ISendFrame() / OFrame_x0_c0(161,0) -> IAck_-1(0) / OOK() -> ISendFrame() / OFrame_x0_c0(161,0)
+FATAL - abslearning.mapper.Counterexample:67 - IAck_-1(43) / OOK() -> IAck_-1(1) / OOK() -> ISendFrame() / ONOK() -> IAck_-1(1) / OOK() -> ISendFrame() / ONOK() -> IIn_-1(161) / x0=p0_OOK() -> ISendFrame() / OFrame_x0_c0(161,0) -> IAck_-1(0) / OOK() -> ISendFrame() / OFrame_x0_c0(161,0)
+FATAL - abslearning.mapper.Counterexample:103 - IAck_-1(43) / OOK() -> IAck_-1(1) / OOK() -> ISendFrame() / ONOK() -> IAck_-1(1) / OOK() -> ISendFrame() / ONOK() -> IIn_-1(161) / x0=p0_OOK() -> ISendFrame() / OFrame_x0_c0(161,0) -> IAck_-1(0) / OOK() -> ISendFrame() / OFrame_x0_c0(161,0)
+FATAL - abslearning.mapper.Counterexample:119 - reducedInputTrace: [IIn_-1(2), ISendFrame(), IAck_-1(0), ISendFrame()]
+FATAL - abslearning.mapper.Counterexample:119 - reducedInputTrace: [IIn_-1(2), ISendFrame()]
+FATAL - abslearning.mapper.Counterexample:119 - reducedInputTrace: [IIn_-1(2), IAck_-1(0), ISendFrame()]
+INFO  - abslearning.mapper.Counterexample:77 - Reducing by removing single transitions
+INFO  - abslearning.mapper.Mapper:787 -  Reduced counterexample: IAck_?(0) / OOK_?()
+INFO  - abslearning.mapper.Mapper:801 -  Canonicalcounterexample: IAck_?(0) / OOK_?()
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:219 - 
+
+lookaheadTraces
+   ISendFrame
+
+
+
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\nlookaheadTraces\n   ISendFrame\n\n\n"
+FATAL - abslearning.mapper.Mapper:845 - "\ntrace on sut \n\nIAck_-1(0) / \nONOK()\n   memV: []   stateVarUpdates: {}   stateVars: {}\n\n\n"
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\nlookaheadTraces\n   ISendFrame\n\n\n\ntrace on sut \n\nIAck_-1(0) / \nONOK()\n   memV: []   stateVarUpdates: {}   stateVars: {}\n\n\n"
+FATAL - abslearning.mapper.Mapper:850 - 
+trace on sut 
+
+IAck_-1(0) / 
+ONOK()
+   memV: []   stateVarUpdates: {}   stateVars: {}
+
+
+
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\nlookaheadTraces\n   ISendFrame\n\n\n\ntrace on sut \n\nIAck_-1(0) / \nONOK()\n   memV: []   stateVarUpdates: {}   stateVars: {}\n\n\n\n\n Termination Reason: concrete counterexample found!\n\n    concrete CE inputs: \n           [IAck(0)]\n    executed:\n       on Sut (with abstractions determined using statevars of sut):\n           IAck_-1(0) / ONOK()\n       on Hyp (with abstractions determined using statevars of hyp):\n           IAck_-1(0) / OOK()"
+FATAL - abslearning.mapper.Mapper:858 - 
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IAck(0)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IAck_-1(0) / ONOK()
+       on Hyp (with abstractions determined using statevars of hyp):
+           IAck_-1(0) / OOK()
+FATAL - abslearning.mapper.Mapper:862 - 
+concrete CE: IAck(0) / ONOK()
+INFO  - abslearning.mapper.Mapper:1139 - 
+
+       abstractInputs:  IAck_-1 
+       OutputsHyp: OOK 
+       OutputsSut: OOK 
+
+
+INFO  - abslearning.mapper.Mapper:895 - Abstraction Refinement
+FATAL - abslearning.mapper.Mapper:896 - Ce trace: IAck_-1(0) / ONOK()
+FATAL - abslearning.mapper.Mapper:897 - Green edges:
+ 
+FATAL - abslearning.mapper.Mapper:898 - Black edges:
+Edge:(value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)->(value:0[null],traceIndex:-1,actionName:_CONSTANTS_,paramIndex:0)
+
+FATAL - abslearning.mapper.Mapper:1312 - abstracted inputs (also allowing reduced ones: [IAck_-1(0)]
+FATAL - abslearning.mapper.Mapper:1324 - analyse (value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)
+FATAL - abslearning.mapper.Mapper:1264 - new relation: paramSubset.size() ==  0 0[-1]
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\nlookaheadTraces\n   ISendFrame\n\n\n\ntrace on sut \n\nIAck_-1(0) / \nONOK()\n   memV: []   stateVarUpdates: {}   stateVars: {}\n\n\n\n\n Termination Reason: concrete counterexample found!\n\n    concrete CE inputs: \n           [IAck(0)]\n    executed:\n       on Sut (with abstractions determined using statevars of sut):\n           IAck_-1(0) / ONOK()\n       on Hyp (with abstractions determined using statevars of hyp):\n           IAck_-1(0) / OOK()\n\n analyse ce relation: (value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)-\u003e(value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)\n\n"
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\nlookaheadTraces\n   ISendFrame\n\n\n\ntrace on sut \n\nIAck_-1(0) / \nONOK()\n   memV: []   stateVarUpdates: {}   stateVars: {}\n\n\n\n\n Termination Reason: concrete counterexample found!\n\n    concrete CE inputs: \n           [IAck(0)]\n    executed:\n       on Sut (with abstractions determined using statevars of sut):\n           IAck_-1(0) / ONOK()\n       on Hyp (with abstractions determined using statevars of hyp):\n           IAck_-1(0) / OOK()\n\n analyse ce relation: (value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)-\u003e(value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)\n\nONLY NEW Abstraction\n"
+INFO  - abslearning.stores.PredicateStore:51 - add inputPredicate: for IAck param p0 add abstraction with index 0
+FATAL - abslearning.stores.PredicateStore:65 - New symbol: IAck_0
+FATAL - abslearning.learner.Statistics:561 - jsonString: "\n\nlookaheadTraces\n   ISendFrame\n\n\n\ntrace on sut \n\nIAck_-1(0) / \nONOK()\n   memV: []   stateVarUpdates: {}   stateVars: {}\n\n\n\n\n Termination Reason: concrete counterexample found!\n\n    concrete CE inputs: \n           [IAck(0)]\n    executed:\n       on Sut (with abstractions determined using statevars of sut):\n           IAck_-1(0) / ONOK()\n       on Hyp (with abstractions determined using statevars of hyp):\n           IAck_-1(0) / OOK()\n\n analyse ce relation: (value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)-\u003e(value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)\n\nONLY NEW Abstraction\n\nNEW ABSTRACTION \u0027IAck_0\u0027 for Input: IAck, Parameter Index: 0, AbstractionVar: c0\n"
+FATAL - abslearning.mapper.Mapper:903 - Found input abstraction!
+INFO  - abslearning.learner.Main:889 - Catched RestartLearningException in Main during phase: analyzeCounterexample
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start afterAnalyzeCounterexample (in run 2)
+-----------------------------------------------------------------------------------
+
+INFO  - abslearning.learner.Main:897 - Done testing; abstraction refinement 
+INFO  - abslearning.learner.Main:929 - Restart Learning
+INFO  - abslearning.learner.Statistics:581 - 
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 2
+Start learning from scratch                    : true
+HypL index/#states after run                   : 1/3
+Membership queries                             : 40
+Membership inputs                              : 102
+Running time of membership                     : 93 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 5
+Testing equivalence inputs                     : 409
+Running time of testing                        : 197 ms = 0:00:00 (h:m:s)
+Ce analysis membership queries                 : 3
+Ce analysis membership inputs                  : 3
+Running time of counterexample analysis        : 40 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 71
+Learn inputs                                   : 144
+Testing resets                                 : 5
+Testing inputs                                 : 409
+Ce Analysis resets                             : 10
+Ce Analysis inputs                             : 13
+
+Number nodes in observation tree               : 52
+Number end nodes in observation tree           : 21
+
+num Ce inputs EquivOracle                      : 9
+num Ce inputs AfterLoopReduction               : 1
+num Ce inputs AfterCeAnalysis                  : 1
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 1
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : 
+
+lookaheadTraces
+   ISendFrame
+
+
+
+trace on sut 
+
+IAck_-1(0) / 
+ONOK()
+   memV: []   stateVarUpdates: {}   stateVars: {}
+
+
+
+
+ Termination Reason: concrete counterexample found!
+
+    concrete CE inputs: 
+           [IAck(0)]
+    executed:
+       on Sut (with abstractions determined using statevars of sut):
+           IAck_-1(0) / ONOK()
+       on Hyp (with abstractions determined using statevars of hyp):
+           IAck_-1(0) / OOK()
+
+ analyse ce relation: (value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)->(value:0[-1],traceIndex:0,actionName:IAck,paramIndex:0)
+
+ONLY NEW Abstraction
+
+NEW ABSTRACTION 'IAck_0' for Input: IAck, Parameter Index: 0, AbstractionVar: c0
+
+
+
+
+
+
+INFO  - abslearning.learner.Statistics:515 - 
+
+===================================================================================
+                         Run: 3
+===================================================================================
+
+FATAL - abslearning.learner.Main:938 - RESET TRACE STORE
+FATAL - abslearning.tree.SutConcreteTree:41 - 
+
+   INCREASE VERSION of tree!! 
+
+
+FATAL - abslearning.tree.trace.LookaheadSutTraceStateVar:168 - rootMaxInputValue: -1
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  5 seconds, number member/test inputs  in current run : 0/0
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start learning (in run 3)
+-----------------------------------------------------------------------------------
+
+INFO  - abslearning.learner.Main:604 - Start Learning
+FATAL - abslearning.learner.Main:608 - abstraction:
+----------------------------------------------
+Concrete alphabet:
+IAck(int)
+IIn(int)
+ISendFrame()
+OFrame(int, int)
+ONOK()
+OOK()
+----------------------------------------------
+Abstraction:
+IAck([c0])
+IIn([])
+ISendFrame()
+OFrame()
+ONOK()
+OOK()
+----------------------------------------------
+Abstract alphabet:
+IAck_-1
+IAck_0
+IIn_-1
+ISendFrame
+----------------------------------------------
+Constants:
+[0, 1]
+----------------------------------------------
+
+INFO  - abslearning.learner.Main:610 - Before Learning
+FATAL - abslearning.learner.Main:611 - hypCounter(counts number of hyps found)  1
+FATAL - abslearning.learner.Main:612 - start learning: 2
+INFO  - abslearning.learner.Main:616 - Done Learning
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start afterLearning (in run 3)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  5 seconds, number member/test inputs  in current run : 145/0
+INFO  - abslearning.learner.Main:628 - Hypothesis 2
+INFO  - abslearning.learner.Hypothesis:67 - update hyp in mapper
+INFO  - sut.implementation.Util:97 - create uppaal model for concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4\bin\tomte_learnresult2uppaal.bat output/model_ABP_output/generated/hypothesis/hyp2.abstractions.json output/model_ABP_output/generated/hypothesis/hyp2.abstract.dot output\model_ABP_output\generated\hypothesis//hyp2.concrete.xml stateVar concreteOutput
+INFO  - sut.implementation.Util:99 - create sut from uppaal model of concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\sut-0.4\sut-0.4\bin\sut_uppaal2jar.bat output\model_ABP_output\generated\hypothesis//hyp2.concrete.xml output/model_ABP_output/generated/hypothesis/hyp2.concrete.jar hypothesis Hyp2 
+FATAL - sut.implementation.Util:147 - create model created
+INFO  - sut.implementation.Util:97 - create uppaal model for concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\tomte-0.4\tomte-0.4\bin\tomte_learnresult2uppaal.bat output/model_ABP_output/generated/hypothesis/hyp2.abstractions.json output/model_ABP_output/generated/hypothesis/hyp2.abstract.dot output\model_ABP_output\generated\hypothesis//hyp2fullHypOutput.concrete.xml stateVar fullHypOutput
+INFO  - sut.implementation.Util:99 - create sut from uppaal model of concrete hyp
+INFO  - util.RunCmd:395 - cmd: D:\testtask\MasterThesis\sut-0.4\sut-0.4\bin\sut_uppaal2jar.bat output\model_ABP_output\generated\hypothesis//hyp2fullHypOutput.concrete.xml output/model_ABP_output/generated/hypothesis/hyp2fullHypOutput.concrete.jar hypothesis HypfullHypOutput2 
+FATAL - sut.implementation.Util:147 - create model created
+INFO  - abslearning.learner.Main:653 - update hyp in mapper
+INFO  - abslearning.mapper.Mapper:133 - construct concrete hyp
+INFO  - abslearning.mapper.Mapper:137 - construct special concrete hyp with abstract inputs as output
+INFO  - abslearning.learner.Main:668 - get number (end)nodes in tree
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  10 seconds, number member/test inputs  in current run : 145/0
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start testing (in run 3)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  14 seconds, number member/test inputs  in current run : 145/301
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  17 seconds, number member/test inputs  in current run : 145/602
+FATAL - abslearning.learner.Statistics:1134 - Check MaxTime(0s) Passed; Runtime:  19 seconds, number member/test inputs  in current run : 145/903
+INFO  - abslearning.learner.Statistics:542 - 
+
+-----------------------------------------------------------------------------------
+                         start afterTesting (in run 3)
+-----------------------------------------------------------------------------------
+
+FATAL - abslearning.learner.Statistics:561 - jsonString: "no counterexample found"
+FATAL - abslearning.learner.Main:881 - no counterexample found
+INFO  - abslearning.learner.Statistics:581 - 
+
+
+-------------------------------------------------------------------------------------
+Run number                                     : 3
+Start learning from scratch                    : true
+HypL index/#states after run                   : 2/7
+Membership queries                             : 145
+Membership inputs                              : 596
+Running time of membership                     : 257 ms = 0:00:00 (h:m:s)
+Testing equivalence queries                    : 1000
+Testing equivalence inputs                     : 100000
+Running time of testing                        : 9628 ms = 0:00:10 (h:m:s)
+Ce analysis membership queries                 : 0
+Ce analysis membership inputs                  : 0
+Running time of counterexample analysis        : 0 ms = 0:00:00 (h:m:s)
+
+Learn resets                                   : 262
+Learn inputs                                   : 818
+Testing resets                                 : 1001
+Testing inputs                                 : 100001
+Ce Analysis resets                             : 0
+Ce Analysis inputs                             : 0
+
+Number nodes in observation tree               : 205
+Number end nodes in observation tree           : 88
+
+num Ce inputs EquivOracle                      : 0
+num Ce inputs AfterLoopReduction               : 0
+num Ce inputs AfterCeAnalysis                  : 0
+number Of Reused CounterExamples               : 0
+
+Abstraction refinement done                    : 0
+Guard lookahead trace added                    : 0
+Output lookahead trace added                   : 0
+Counterexample sent to learner                 : 0
+Description of run                             : no counterexample found
+
+
+
+
+
+INFO  - abslearning.learner.Statistics:1185 - total time running cadp compare: 0
+INFO  - abslearning.learner.Main:1072 - TOMTE FINISHED learning: learned model cannot be verified to be correct
+INFO  - abslearning.learner.Main:392 - THE END

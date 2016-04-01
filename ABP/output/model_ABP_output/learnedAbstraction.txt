@@ -1,0 +1,26 @@
+----------------------------------------------
+Concrete alphabet:
+IAck(int)
+IIn(int)
+ISendFrame()
+OFrame(int, int)
+ONOK()
+OOK()
+----------------------------------------------
+Abstraction:
+IAck([c0])
+IIn([])
+ISendFrame()
+OFrame()
+ONOK()
+OOK()
+----------------------------------------------
+Abstract alphabet:
+IAck_-1
+IAck_0
+IIn_-1
+ISendFrame
+----------------------------------------------
+Constants:
+[0, 1]
+----------------------------------------------

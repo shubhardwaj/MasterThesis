@@ -1,0 +1,349 @@
+<nta>
+<declaration>
+// Place global declarations here. const int zero = 0; const int one = 1; int vd; void IIn(int d) { } void ISendFrame() { } void IAck(int b) { } void OFrame(int vd, int b) { } void OOK() { } void ONOK() { }
+</declaration>
+<template>
+<name x="5" y="5">Template</name>
+<declaration>// Place local declarations here.</declaration>
+<location id="id0" x="16" y="72"/>
+<location id="id1" x="144" y="72"/>
+<location id="id2" x="80" y="-24"/>
+<location id="id3" x="-144" y="-8"/>
+<location id="id4" x="-48" y="208"/>
+<location id="id5" x="304" y="112"/>
+<location id="id6" x="304" y="208"/>
+<location id="id7" x="200" y="208"/>
+<location id="id8" x="304" y="-8"/>
+<location id="id9" x="80" y="-128"/>
+<location id="id10" x="200" y="-312"/>
+<location id="id11" x="-48" y="-312"/>
+<location id="id12" x="-144" y="-312"/>
+<location id="id13" x="-144" y="-216"/>
+<location id="id14" x="-144" y="-104"/>
+<location id="id15" x="-144" y="208"/>
+<location id="id16" x="304" y="-104"/>
+<location id="id17" x="304" y="-312"/>
+<location id="id18" x="-48" y="-128"/>
+<location id="id19" x="-48" y="-48"/>
+<location id="id20" x="-48" y="32"/>
+<location id="id21" x="-48" y="112"/>
+<location id="id22" x="80" y="112"/>
+<location id="id23" x="200" y="112"/>
+<location id="id24" x="200" y="32"/>
+<location id="id25" x="200" y="-48"/>
+<location id="id26" x="200" y="-128"/>
+<location id="id27" x="200" y="-216"/>
+<location id="id28" x="80" y="-216"/>
+<location id="id29" x="-48" y="-216"/>
+<init ref="id29"/>
+<transition>
+<source ref="id0"/>
+<target ref="id2"/>
+<label kind="synchronisation" x="16" y="0">ONOK()</label>
+<nail x="40" y="16"/>
+</transition>
+<transition>
+<source ref="id2"/>
+<target ref="id0"/>
+<label kind="synchronisation" x="48" y="32">IAck(b)</label>
+<nail x="56" y="32"/>
+</transition>
+<transition>
+<source ref="id19"/>
+<target ref="id9"/>
+<label kind="synchronisation" x="16" y="-112">IIn(d)</label>
+<label kind="assignment" x="16" y="-96">vd=d;</label>
+</transition>
+<transition>
+<source ref="id2"/>
+<target ref="id9"/>
+<label kind="synchronisation" x="56" y="-88">IIn(d)</label>
+<label kind="assignment" x="56" y="-72">vd=d;</label>
+<nail x="72" y="-64"/>
+</transition>
+<transition>
+<source ref="id1"/>
+<target ref="id2"/>
+<label kind="synchronisation" x="80" y="56">ONOK()</label>
+<nail x="96" y="16"/>
+</transition>
+<transition>
+<source ref="id2"/>
+<target ref="id1"/>
+<label kind="synchronisation" x="104" y="8">ISendFrame()</label>
+<nail x="112" y="8"/>
+</transition>
+<transition>
+<source ref="id9"/>
+<target ref="id2"/>
+<label kind="synchronisation" x="88" y="-56">ONOK()</label>
+<nail x="88" y="-64"/>
+</transition>
+<transition>
+<source ref="id3"/>
+<target ref="id19"/>
+<label kind="synchronisation" x="-216" y="-48">OFrame(vd,one)</label>
+<nail x="-104" y="-40"/>
+</transition>
+<transition>
+<source ref="id4"/>
+<target ref="id21"/>
+<label kind="synchronisation" x="-96" y="168">OOK()</label>
+<nail x="-56" y="160"/>
+</transition>
+<transition>
+<source ref="id21"/>
+<target ref="id4"/>
+<label kind="guard" x="-40" y="136">b==zero</label>
+<label kind="synchronisation" x="-40" y="152">IAck(b)</label>
+<nail x="-40" y="160"/>
+</transition>
+<transition>
+<source ref="id7"/>
+<target ref="id23"/>
+<label kind="synchronisation" x="144" y="168">ONOK()</label>
+<nail x="192" y="160"/>
+</transition>
+<transition>
+<source ref="id6"/>
+<target ref="id23"/>
+<label kind="synchronisation" x="248" y="192">OOK()</label>
+<nail x="248" y="168"/>
+</transition>
+<transition>
+<source ref="id5"/>
+<target ref="id23"/>
+<label kind="synchronisation" x="248" y="120">ONOK()</label>
+<nail x="256" y="120"/>
+</transition>
+<transition>
+<source ref="id19"/>
+<target ref="id3"/>
+<label kind="synchronisation" x="-128" y="-24">ISendFrame()</label>
+<nail x="-96" y="-24"/>
+</transition>
+<transition>
+<source ref="id21"/>
+<target ref="id9"/>
+<label kind="synchronisation" x="-24" y="17">IIn(d)</label>
+<label kind="assignment" x="-24" y="32">vd=d;</label>
+<nail x="-40" y="104"/>
+</transition>
+<transition>
+<source ref="id23"/>
+<target ref="id7"/>
+<label kind="guard" x="208" y="160">b!=zero</label>
+<label kind="synchronisation" x="208" y="176">IAck(b)</label>
+<nail x="208" y="160"/>
+</transition>
+<transition>
+<source ref="id23"/>
+<target ref="id6"/>
+<label kind="guard" x="288" y="152">b==zero</label>
+<label kind="synchronisation" x="288" y="168">IAck(b)</label>
+<nail x="264" y="160"/>
+</transition>
+<transition>
+<source ref="id23"/>
+<target ref="id5"/>
+<label kind="synchronisation" x="216" y="88">ISendFrame()</label>
+<nail x="256" y="104"/>
+</transition>
+<transition>
+<source ref="id8"/>
+<target ref="id25"/>
+<label kind="synchronisation" x="200" y="-16">OFrame(vd,zero)</label>
+<nail x="256" y="-16"/>
+</transition>
+<transition>
+<source ref="id25"/>
+<target ref="id9"/>
+<label kind="synchronisation" x="120" y="-96">IIn(d)</label>
+<label kind="assignment" x="120" y="-80">vd=d;</label>
+<nail x="184" y="-56"/>
+</transition>
+<transition>
+<source ref="id25"/>
+<target ref="id8"/>
+<label kind="synchronisation" x="288" y="-40">ISendFrame()</label>
+<nail x="272" y="-32"/>
+</transition>
+<transition>
+<source ref="id10"/>
+<target ref="id27"/>
+<label kind="synchronisation" x="200" y="-288">ONOK()</label>
+<nail x="208" y="-264"/>
+</transition>
+<transition>
+<source ref="id27"/>
+<target ref="id9"/>
+<label kind="synchronisation" x="104" y="-167">IIn(d)</label>
+<label kind="assignment" x="104" y="-152">vd=d;</label>
+<nail x="200" y="-208"/>
+</transition>
+<transition>
+<source ref="id27"/>
+<target ref="id10"/>
+<label kind="guard" x="136" y="-312">b==zero</label>
+<label kind="synchronisation" x="144" y="-296">IAck(b)</label>
+<nail x="192" y="-264"/>
+</transition>
+<transition>
+<source ref="id11"/>
+<target ref="id29"/>
+<label kind="synchronisation" x="-40" y="-304">OOK()</label>
+<nail x="-40" y="-264"/>
+</transition>
+<transition>
+<source ref="id12"/>
+<target ref="id29"/>
+<label kind="synchronisation" x="-128" y="-320">ONOK()</label>
+<nail x="-96" y="-272"/>
+</transition>
+<transition>
+<source ref="id13"/>
+<target ref="id29"/>
+<label kind="synchronisation" x="-136" y="-240">ONOK()</label>
+<nail x="-96" y="-224"/>
+</transition>
+<transition>
+<source ref="id29"/>
+<target ref="id11"/>
+<label kind="guard" x="-104" y="-296">b!=zero</label>
+<label kind="synchronisation" x="-88" y="-280">IAck(b)</label>
+<nail x="-56" y="-264"/>
+</transition>
+<transition>
+<source ref="id29"/>
+<target ref="id12"/>
+<label kind="guard" x="-184" y="-296">b==zero</label>
+<label kind="synchronisation" x="-168" y="-280">IAck(b)</label>
+<nail x="-112" y="-256"/>
+</transition>
+<transition>
+<source ref="id29"/>
+<target ref="id13"/>
+<label kind="synchronisation" x="-144" y="-208">ISendFrame()</label>
+<nail x="-96" y="-208"/>
+</transition>
+<transition>
+<source ref="id14"/>
+<target ref="id19"/>
+<label kind="synchronisation" x="-120" y="-112">OOK()</label>
+<nail x="-88" y="-88"/>
+</transition>
+<transition>
+<source ref="id15"/>
+<target ref="id21"/>
+<label kind="synchronisation" x="-156" y="145">ONOK()</label>
+<nail x="-104" y="160"/>
+</transition>
+<transition>
+<source ref="id16"/>
+<target ref="id25"/>
+<label kind="synchronisation" x="272" y="-80">OOK()</label>
+<nail x="264" y="-72"/>
+</transition>
+<transition>
+<source ref="id17"/>
+<target ref="id27"/>
+<label kind="synchronisation" x="272" y="-280">OOK()</label>
+<nail x="256" y="-256"/>
+</transition>
+<transition>
+<source ref="id19"/>
+<target ref="id14"/>
+<label kind="guard" x="-168" y="-88">b==zero</label>
+<label kind="synchronisation" x="-152" y="-72">IAck(b)</label>
+<nail x="-104" y="-72"/>
+</transition>
+<transition>
+<source ref="id21"/>
+<target ref="id15"/>
+<label kind="guard" x="-120" y="184">b!=zero</label>
+<label kind="synchronisation" x="-120" y="199">IAck(b)</label>
+<nail x="-88" y="168"/>
+</transition>
+<transition>
+<source ref="id25"/>
+<target ref="id16"/>
+<label kind="guard" x="248" y="-136">b!=zero</label>
+<label kind="synchronisation" x="248" y="-120">IAck(b)</label>
+<nail x="256" y="-88"/>
+</transition>
+<transition>
+<source ref="id27"/>
+<target ref="id17"/>
+<label kind="guard" x="240" y="-328">b!=zero</label>
+<label kind="synchronisation" x="240" y="-312">IAck(b)</label>
+<nail x="248" y="-272"/>
+</transition>
+<transition>
+<source ref="id18"/>
+<target ref="id29"/>
+<label kind="synchronisation" x="-48" y="-176">OOK()</label>
+</transition>
+<transition>
+<source ref="id19"/>
+<target ref="id18"/>
+<label kind="guard" x="-48" y="-104">b!=zero</label>
+<label kind="synchronisation" x="-48" y="-88">IAck(b)</label>
+</transition>
+<transition>
+<source ref="id20"/>
+<target ref="id19"/>
+<label kind="synchronisation" x="-104" y="0">OFrame(vd,one)</label>
+</transition>
+<transition>
+<source ref="id21"/>
+<target ref="id20"/>
+<label kind="synchronisation" x="-136" y="64">ISendFrame()</label>
+</transition>
+<transition>
+<source ref="id22"/>
+<target ref="id21"/>
+<label kind="synchronisation" x="0" y="112">OOK()</label>
+</transition>
+<transition>
+<source ref="id23"/>
+<target ref="id22"/>
+<label kind="synchronisation" x="120" y="112">IIn(d)</label>
+<label kind="assignment" x="120" y="128">vd=d;</label>
+</transition>
+<transition>
+<source ref="id24"/>
+<target ref="id23"/>
+<label kind="synchronisation" x="200" y="48">OOK()</label>
+</transition>
+<transition>
+<source ref="id25"/>
+<target ref="id24"/>
+<label kind="guard" x="144" y="-32">b==zero</label>
+<label kind="synchronisation" x="152" y="-16">IAck(b)</label>
+</transition>
+<transition>
+<source ref="id26"/>
+<target ref="id25"/>
+<label kind="synchronisation" x="160" y="-96">OFrame(vd,zero)</label>
+</transition>
+<transition>
+<source ref="id27"/>
+<target ref="id26"/>
+<label kind="synchronisation" x="200" y="-184">ISendFrame()</label>
+</transition>
+<transition>
+<source ref="id28"/>
+<target ref="id27"/>
+<label kind="synchronisation" x="112" y="-232">OOK()</label>
+</transition>
+<transition>
+<source ref="id29"/>
+<target ref="id28"/>
+<label kind="synchronisation" x="-8" y="-248">IIn(d)</label>
+<label kind="assignment" x="-8" y="-232">vd=d;</label>
+</transition>
+</template>
+<system>
+// Place template instantiations here. Process = Template(); // List one or more processes to be composed into a system. system Process;
+</system>
+</nta>

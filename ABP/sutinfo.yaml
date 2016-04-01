@@ -1,0 +1,16 @@
+constants:
+- 0
+- 1
+inputInterfaces:
+  IAck:
+  - int
+  IIn:
+  - int
+  ISendFrame: []
+name: model_ABP_output
+outputInterfaces:
+  OFrame:
+  - int
+  - int
+  ONOK: []
+  OOK: []
